@@ -1,6 +1,6 @@
 // src/components/Navbar.jsx
 import { Link, NavLink } from "react-router-dom";
-
+import ukuikiLogo from "../assets/ukuikiLogo.png";
 const MenuLink = ({ to, children }) => (
   <NavLink
     to={to}
@@ -19,7 +19,7 @@ export default function Navbar() {
     <header className="bg-white shadow">
       <div className="mx-auto flex max-w-5xl items-center justify-between p-4">
         <Link to="/" className="text-2xl font-black text-primary">
-          Ukuiki
+          <img src={ukuikiLogo} alt="ukuiki logo" className="h-20" />
         </Link>
         <nav className="hidden gap-2 md:flex">
           <MenuLink to="/shop">Shop</MenuLink>
