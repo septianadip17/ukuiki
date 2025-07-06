@@ -1,20 +1,27 @@
-import { useState } from "react"
-const App = () => {
-  const [count,setCount] = useState(0)
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar.jsx";
+import Footer from "./components/Footer.jsx";
 
-  const HandleClick = () => {
-    setCount(count + 1)
-  }
+import Home from "./pages/Home.jsx";
+import Shop from "./pages/Shop.jsx";
+import News from "./pages/News.jsx";
+import Workshop from "./pages/Workshop.jsx";
+import Qna from "./pages/Qna.jsx";
+
+export default function App() {
   return (
-    <div className=" text-white">
-      <div className=" justify-center items-center grid space-y-5 mt-52">
-         <p className=" text-center">Extension Creator <a href="https://www.instagram.com/nandakaws/" className=" duration-200 hover:text-purple-500">NandaKaws</a></p>
-         <h1 className=" text-purple-500 text-5xl font-bold  "><span className=" text-white">Lets</span>code!</h1>
-         <button onClick={HandleClick} className=" rounded-lg font-bold text-xl bg-purple-500">Click</button>
-         <h1 className=" text-center font-bold  ">{count}</h1>
-      </div>
+    <div className="flex min-h-screen flex-col bg-[#f9f9ff]">
+      <Navbar />
+      <main className="flex-1">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/workshop" element={<Workshop />} />
+          <Route path="/qna" element={<Qna />} />
+        </Routes>
+      </main>
+      <Footer />
     </div>
-  )
+  );
 }
-
-export default App
