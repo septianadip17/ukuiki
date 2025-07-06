@@ -26,6 +26,8 @@ export default function Navbar() {
           <MenuLink to="/news">News</MenuLink>
           <MenuLink to="/workshop">Workshop</MenuLink>
           <MenuLink to="/qna">Q&A</MenuLink>
+          <MenuLink to="/about">About</MenuLink>
+          <MenuLink to="/contact">Contact</MenuLink>
         </nav>
       </div>
     </header>

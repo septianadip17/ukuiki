@@ -7,6 +7,8 @@ import Shop from "./pages/Shop.jsx";
 import News from "./pages/News.jsx";
 import Workshop from "./pages/Workshop.jsx";
 import Qna from "./pages/Qna.jsx";
+import About from "./pages/About.jsx";
+import Contact from "./pages/Contact.jsx";
 
 export default function App() {
   return (
@@ -19,6 +21,8 @@ export default function App() {
           <Route path="/news" element={<News />} />
           <Route path="/workshop" element={<Workshop />} />
           <Route path="/qna" element={<Qna />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
       <Footer />
