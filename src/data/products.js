@@ -3,7 +3,15 @@ export default [
     id: 1,
     name: "Ukuiki Soprano Mahogany",
     price: "Rp 850 000",
-    image: "https://source.unsplash.com/random/400x300/?ukulele,mahogany",
+    image: "/img/soprano-mahogany.jpg",   // letakkan di public/img/
+    desc: "Body mahogany, suara hangat cocok pemula.",
   },
-  // tambah item lain…
+  {
+    id: 2,
+    name: "Ukuiki Concert Spruce Top",
+    price: "Rp 1 250 000",
+    image: "/img/concert-spruce.jpg",
+    desc: "Top spruce, projection lebih terang.",
+  },
+  // tambah produk lain…
 ];

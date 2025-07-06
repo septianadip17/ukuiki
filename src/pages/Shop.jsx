@@ -1,34 +1,40 @@
-import products from "../data/products.js";
+import products from "../data/products";
 
 export default function Shop() {
   return (
-    <section className="mx-auto max-w-5xl p-6">
-      <h1 className="mb-4 text-3xl font-bold text-primary">
+    <section className="mx-auto max-w-6xl px-4 py-8">
+      <h1 className="mb-6 text-3xl font-bold text-primary">
         Ukulele Ready Stock
       </h1>
+
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {products.map((item) => (
+        {products.map((p) => (
           <article
-            key={item.id}
-            className="rounded-2xl bg-white p-4 shadow hover:shadow-lg"
+            key={p.id}
+            className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow transition hover:shadow-lg"
           >
             <img
-              src={item.image}
-              alt={item.name}
-              className="h-40 w-full rounded-xl object-cover"
+              src={p.image}
+              alt={p.name}
+              className="h-44 w-full object-cover transition duration-300 group-hover:scale-105"
             />
-            <h2 className="mt-3 font-semibold">{item.name}</h2>
-            <p className="text-primary-light font-bold">{item.price}</p>
-            {/* tombol beli via WA */}
-            <a
-              href={`https://wa.me/62xxxxxxxxxxx?text=Halo%20Ukuiki%2C%20saya%20mau%20pesan%20${encodeURIComponent(
-                item.name
-              )}`}
-              target="_blank"
-              className="mt-2 inline-block rounded-full bg-primary px-4 py-2 text-white"
-            >
-              Beli via WhatsApp
-            </a>
+            <div className="flex flex-1 flex-col p-4">
+              <h2 className="text-lg font-semibold">{p.name}</h2>
+              <p className="mb-2 text-sm text-gray-500">{p.desc}</p>
+              <span className="mb-4 text-primary-light font-bold">
+                {p.price}
+              </span>
+
+              <a
+                href={`https://wa.me/62xxxxxxxxxxx?text=Halo%20Ukuiki%2C%20saya%20mau%20pesan%20${encodeURIComponent(
+                  p.name
+                )}`}
+                target="_blank"
+                className="mt-auto inline-block rounded-full bg-primary px-4 py-2 text-center text-white"
+              >
+                Beli via WhatsApp
+              </a>
+            </div>
           </article>
         ))}
       </div>
