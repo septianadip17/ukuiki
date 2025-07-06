@@ -16,7 +16,7 @@ export default function Shop() {
             <img
               src={p.image}
               alt={p.name}
-              className="h-44 w-full object-cover transition duration-300 group-hover:scale-105"
+              className="h-54 w-full object-cover transition duration-300 group-hover:scale-105"
             />
             <div className="flex flex-1 flex-col p-4">
               <h2 className="text-lg font-semibold">{p.name}</h2>
@@ -26,7 +26,7 @@ export default function Shop() {
               </span>
 
               <a
-                href={`https://wa.me/62xxxxxxxxxxx?text=Halo%20Ukuiki%2C%20saya%20mau%20pesan%20${encodeURIComponent(
+                href={`https://wa.me/6289696135242?text=Halo%20Ukuiki%2C%20saya%20mau%20pesan%20${encodeURIComponent(
                   p.name
                 )}`}
                 target="_blank"

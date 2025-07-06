@@ -1,9 +1,103 @@
-import React from 'react'
+// src/components/Footer.jsx
+import { Link } from "react-router-dom";
 
-const Footer = () => {
+export default function Footer() {
   return (
-    <div>Footer</div>
-  )
-}
+    <footer className="bg-primary text-white mt-16">
+      <div className="mx-auto max-w-6xl px-4 py-10 grid gap-6 sm:grid-cols-2 md:grid-cols-4">
+        {/* Brand */}
+        <div>
+          <h2 className="text-xl font-bold mb-2">Ukuiki</h2>
+          <p className="text-sm text-white/80">
+            Komunitas ukulele Indonesia – bermain, belajar, dan berbagi.
+          </p>
+        </div>
 
-export default Footer
+        {/* Navigasi */}
+        <div>
+          <h3 className="mb-2 font-semibold">Navigasi</h3>
+          <ul className="space-y-1 text-sm">
+            <li>
+              <Link to="/" className="hover:underline">
+                Beranda
+              </Link>
+            </li>
+            <li>
+              <Link to="/shop" className="hover:underline">
+                Shop
+              </Link>
+            </li>
+            <li>
+              <Link to="/workshop" className="hover:underline">
+                Workshop
+              </Link>
+            </li>
+            <li>
+              <Link to="/qna" className="hover:underline">
+                Q&A
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        {/* Tentang */}
+        <div>
+          <h3 className="mb-2 font-semibold">Tentang</h3>
+          <ul className="space-y-1 text-sm">
+            <li>
+              <Link to="/about" className="hover:underline">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link to="/news" className="hover:underline">
+                News
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" className="hover:underline">
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        {/* Media Sosial */}
+        <div>
+          <h3 className="mb-2 font-semibold">Ikuti Kami</h3>
+          <ul className="space-y-1 text-sm">
+            <li>
+              <a
+                href="https://instagram.com/ukuiki"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                📸 Instagram
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://wa.me/62XXXXXXXXXX"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                💬 WhatsApp
+              </a>
+            </li>
+            <li>
+              <a href="mailto:halo@ukuiki.com" className="hover:underline">
+                ✉️ Email
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="border-t border-white/20 py-4 text-center text-sm text-white/70">
+        © {new Date().getFullYear()} Ukuiki. All rights reserved.
+      </div>
+    </footer>
+  );
+}

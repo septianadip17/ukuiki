@@ -4,7 +4,7 @@ import Footer from "./components/Footer.jsx";
 
 import Home from "./pages/Home.jsx";
 import Shop from "./pages/Shop.jsx";
-import News from "./pages/News.jsx";
+import Community from "./pages/Community.jsx";
 import Workshop from "./pages/Workshop.jsx";
 import Qna from "./pages/Qna.jsx";
 import About from "./pages/About.jsx";
@@ -18,7 +18,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
-          <Route path="/news" element={<News />} />
+          <Route path="/community" element={<Community />} />
           <Route path="/workshop" element={<Workshop />} />
           <Route path="/qna" element={<Qna />} />
           <Route path="/about" element={<About />} />

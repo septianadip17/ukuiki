@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const pages = [
   { title: "Shop",     path: "/shop",     icon: "🎸" },
-  { title: "News",     path: "/news",     icon: "📰" },
+  { title: "Community",     path: "/community",     icon: "📰" },
   { title: "Workshop", path: "/workshop", icon: "🎶" },
   { title: "Q&A",      path: "/qna",      icon: "❓" },
   { title: "About",    path: "/about",    icon: "ℹ️" },

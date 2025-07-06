@@ -1,17 +1,23 @@
 export default [
   {
     id: 1,
-    name: "Ukuiki Soprano Mahogany",
-    price: "Rp 850 000",
-    image: "/img/soprano-mahogany.jpg",   // letakkan di public/img/
-    desc: "Body mahogany, suara hangat cocok pemula.",
+    name: "Hibiscus painting on soprano",
+    price: "Rp. 695.000",
+    image: "/src/assets/ukulele/hibiscusSoprano.jpg",  
+    desc: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     id: 2,
-    name: "Ukuiki Concert Spruce Top",
-    price: "Rp 1 250 000",
-    image: "/img/concert-spruce.jpg",
-    desc: "Top spruce, projection lebih terang.",
+    name: "Batik painting on soprano",
+    price: "Rp. 750.000",
+    image: "/src/assets/ukulele/batikSoprano.jpg",  
+    desc: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
-  // tambah produk lain…
+  {
+    id: 3,
+    name: "Dayak painting on tenor trembesi",
+    price: "Rp. 750.000",
+    image: "/src/assets/ukulele/dayakTenor.jpg",  
+    desc: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
 ];
