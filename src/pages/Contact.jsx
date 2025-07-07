@@ -8,20 +8,19 @@ export default function Contact() {
       </p>
 
       <ul className="space-y-2 text-gray-700">
-        <li>📍 Alamat: Jl. Musik Bahagia No. 7, Jakarta Selatan</li>
         <li>
           📞 WhatsApp:{" "}
           <a
-            href="https://wa.me/62xxxxxxxxxxx"
+            href="https://wa.me/62818749604"
             className="text-primary underline"
           >
-            +62 xxx-xxxx
+            +62 818-749-604
           </a>
         </li>
         <li>
           📧 Email:{" "}
-          <a href="mailto:halo@ukuiki.com" className="text-primary underline">
-            halo@ukuiki.com
+          <a href="mailto:ukuikiukulele@gmail.com" className="text-primary underline">
+          ukuikiukulele@gmail.com
           </a>
         </li>
         <li>
