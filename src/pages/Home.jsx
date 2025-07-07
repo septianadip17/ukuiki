@@ -31,13 +31,13 @@ export default function Home() {
             <div className="flex flex-wrap gap-4">
               <Link
                 to="/shop"
-                className="rounded-full bg-white px-6 py-3 text-primary font-semibold shadow hover:bg-gray-100"
+                className="rounded-full bg-primary-dark px-6 py-3 text-white font-semibold shadow hover:bg-gray-100"
               >
                 Lihat Ukulele
               </Link>
               <Link
                 to="/events"
-                className="rounded-full bg-primary-light/20 px-6 py-3 text-white hover:bg-primary-light/30"
+                className="rounded-full bg-primary-light px-6 py-3 text-white hover:bg-primary-light/10"
               >
                 Jadwal Event
               </Link>
