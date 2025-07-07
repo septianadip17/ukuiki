@@ -1,10 +1,10 @@
 export default function Contact() {
   return (
     <section className="mx-auto max-w-4xl px-4 py-8">
-      <h1 className="mb-4 text-3xl font-bold text-primary">Kontak Kami</h1>
+      <h1 className="mb-4 text-3xl font-bold text-primary">Contact Us</h1>
       <p className="text-gray-700 mb-6">
-        Ingin kerja sama, mengundang workshop, atau bertanya langsung? Hubungi
-        kami di:
+        Punya pertanyaan, butuh bantuan, atau mau pesan ukulele? Hubungi kami
+        melalui WhatsApp, email, atau Instagram. Kami siap membantu!
       </p>
 
       <ul className="space-y-2 text-gray-700">
