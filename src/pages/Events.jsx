@@ -11,8 +11,16 @@ export default function Events() {
             className="rounded-2xl bg-white p-4 shadow-md transition hover:shadow-lg"
           >
             <h2 className="text-xl font-bold text-primary">{w.title}</h2>
+            {w.photo && (
+              <img
+                src={w.photo}
+                alt={w.title}
+                className="my-4 h-48 w-full rounded-lg object-cover"
+              />
+            )}
+            <p className="mb-2 text-gray-600">{w.desc}</p>
             <p className="text-sm text-gray-500">
-              {new Date(w.date).toLocaleDateString("id-ID", {
+              {new Date(w.date).toLocaleDateString("en-EN", {
                 weekday: "long",
                 day: "numeric",
                 month: "long",
@@ -26,7 +34,7 @@ export default function Events() {
               target="_blank"
               className="inline-block rounded-full bg-primary px-4 py-2 text-white hover:bg-primary-dark"
             >
-              Daftar via WhatsApp
+              Sign Up
             </a>
           </div>
         ))}

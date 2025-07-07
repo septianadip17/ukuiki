@@ -1,18 +1,12 @@
 export default [
   {
     id: 1,
-    title: "Belajar Ukulele untuk Pemula",
+    title: "UKUiki Summer Class",
     date: "2025-07-13",
-    time: "10.00 – 12.00 WIB",
-    location: "Ruang Komunitas, Tebet, Jakarta",
-    link: "https://wa.me/62xxxxxxxxxxx?text=Saya%20mau%20ikut%20workshop%20pemula",
-  },
-  {
-    id: 2,
-    title: "Strumming & Chord Lanjutan",
-    date: "2025-07-20",
-    time: "14.00 – 16.00 WIB",
-    location: "Kopi Ukulele, Yogyakarta",
-    link: "https://wa.me/62xxxxxxxxxxx?text=Saya%20mau%20ikut%20workshop%20lanjutan",
+    time: "09.30 AM – 11.00 AM",
+    location: "Jakarta Escape, Jatimurni, Jakarta",
+    desc: "A beginner class for those who want to learn basic ukuleles. You can borrow ukuleles from us. (Limited)",
+    link: "https://wa.me/62818749604?text=Saya%20mau%20ikut%20workshop%20pemula",
+    photo: "https://source.unsplash.com/800x400/?ukulele,learning",
   },
 ];
