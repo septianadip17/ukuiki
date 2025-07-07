@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import ukuikiLogo from "../assets/ukuikiLogo.png";
 
 const pages = [
   { title: "Shop",     path: "/shop",     icon: "🎸" },
@@ -17,7 +16,7 @@ export default function Home() {
       <section className="flex min-h-[60vh] items-center justify-center bg-primary/[0.05] px-4">
         <div className="text-center">
           <h1 className="mb-4 text-4xl font-black tracking-tight text-primary">
-            Selamat Datang di <img src={ukuikiLogo} alt="ukuiki logo" className="inline h-32 w-auto" />
+            Selamat Datang di UKUiki <br />
           </h1>
           <p className="mx-auto mb-6 max-w-md text-gray-600">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquam rem eum omnis maxime earum modi, atque necessitatibus sapiente a voluptates perferendis sed dolore tempore temporibus quis vero commodi numquam.
