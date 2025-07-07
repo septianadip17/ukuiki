@@ -31,7 +31,7 @@ export default function Home() {
             <div className="flex flex-wrap gap-4">
               <Link
                 to="/shop"
-                className="rounded-full bg-primary-dark px-6 py-3 text-white font-semibold shadow hover:bg-gray-100"
+                className="rounded-full bg-primary-dark px-6 py-3 text-white font-semibold shadow hover:bg-primary-dark/10"
               >
                 Lihat Ukulele
               </Link>
