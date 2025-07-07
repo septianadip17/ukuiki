@@ -9,7 +9,7 @@ export default function Footer() {
         <div>
           <h2 className="text-xl font-bold mb-2">Ukuiki</h2>
           <p className="text-sm text-white/80">
-            Komunitas ukulele Indonesia – bermain, belajar, dan berbagi.
+            When art meets music, paintings and melodies through ukulele.
           </p>
         </div>
 
