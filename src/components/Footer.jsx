@@ -28,13 +28,8 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link to="/workshop" className="hover:underline">
-                Workshop
-              </Link>
-            </li>
-            <li>
-              <Link to="/qna" className="hover:underline">
-                Q&A
+              <Link to="/events" className="hover:underline">
+                Events
               </Link>
             </li>
           </ul>
@@ -50,8 +45,8 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link to="/news" className="hover:underline">
-                News
+              <Link to="/community" className="hover:underline">
+                Community
               </Link>
             </li>
             <li>
