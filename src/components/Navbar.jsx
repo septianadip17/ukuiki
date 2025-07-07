@@ -36,7 +36,7 @@ export default function Navbar() {
           <MenuLink to="/">Home</MenuLink>
           <MenuLink to="/shop">Shop</MenuLink>
           <MenuLink to="/community">Community</MenuLink>
-          <MenuLink to="/workshop">Workshop</MenuLink>
+          <MenuLink to="/events">Events</MenuLink>
           <MenuLink to="/qna">Q&A</MenuLink>
           <MenuLink to="/about">About</MenuLink>
           <MenuLink to="/contact">Contact</MenuLink>
@@ -59,7 +59,7 @@ export default function Navbar() {
             <MenuLink to="/"        onClick={close}>Home</MenuLink>
             <MenuLink to="/shop"      onClick={close}>Shop</MenuLink>
             <MenuLink to="/community"      onClick={close}>Community</MenuLink>
-            <MenuLink to="/workshop"  onClick={close}>Workshop</MenuLink>
+            <MenuLink to="/events"  onClick={close}>Events</MenuLink>
             <MenuLink to="/qna"       onClick={close}>Q&A</MenuLink>
             <MenuLink to="/about"     onClick={close}>About</MenuLink>
             <MenuLink to="/contact"   onClick={close}>Contact</MenuLink>

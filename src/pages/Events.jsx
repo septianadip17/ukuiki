@@ -1,11 +1,11 @@
-import workshops from "../data/workshops";
+import events from "../data/events.js";
 
-export default function Workshop() {
+export default function Events() {
   return (
     <section className="mx-auto max-w-5xl px-4 py-8">
-      <h1 className="mb-6 text-3xl font-bold text-primary">Jadwal Workshop</h1>
+      <h1 className="mb-6 text-3xl font-bold text-primary">Jadwal Events</h1>
       <div className="space-y-6">
-        {workshops.map((w) => (
+        {events.map((w) => (
           <div
             key={w.id}
             className="rounded-2xl bg-white p-4 shadow-md transition hover:shadow-lg"

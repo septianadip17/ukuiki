@@ -4,7 +4,7 @@ import ukuikiLogo from "../assets/ukuikiLogo.png";
 const pages = [
   { title: "Shop",     path: "/shop",     icon: "🎸" },
   { title: "Community",     path: "/community",     icon: "📰" },
-  { title: "Workshop", path: "/workshop", icon: "🎶" },
+  { title: "Events", path: "/events", icon: "🎶" },
   { title: "Q&A",      path: "/qna",      icon: "❓" },
   { title: "About",    path: "/about",    icon: "ℹ️" },
   { title: "Contact",  path: "/contact",  icon: "☎️" },
