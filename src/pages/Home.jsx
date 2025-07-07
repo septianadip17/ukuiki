@@ -33,13 +33,13 @@ export default function Home() {
                 to="/shop"
                 className="rounded-full bg-primary-dark px-6 py-3 text-white font-semibold shadow hover:bg-primary-dark/10"
               >
-                Lihat Ukulele
+                Buy Ukulele
               </Link>
               <Link
                 to="/events"
                 className="rounded-full bg-primary-light px-6 py-3 text-white hover:bg-primary-light/10"
               >
-                Jadwal Event
+                Events
               </Link>
             </div>
           </div>

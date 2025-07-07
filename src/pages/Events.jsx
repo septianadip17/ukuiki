@@ -3,7 +3,7 @@ import events from "../data/events.js";
 export default function Events() {
   return (
     <section className="mx-auto max-w-5xl px-4 py-8">
-      <h1 className="mb-6 text-3xl font-bold text-primary">Jadwal Events</h1>
+      <h1 className="mb-6 text-3xl font-bold text-primary">Events Schedule</h1>
       <div className="space-y-6">
         {events.map((w) => (
           <div
