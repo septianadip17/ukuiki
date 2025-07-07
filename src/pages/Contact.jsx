@@ -12,6 +12,7 @@ export default function Contact() {
           📞 WhatsApp:{" "}
           <a
             href="https://wa.me/62818749604"
+            target="_blank"
             className="text-primary underline"
           >
             +62 818-749-604
@@ -21,6 +22,7 @@ export default function Contact() {
           📧 Email:{" "}
           <a
             href="mailto:ukuikiukulele@gmail.com"
+            target="_blank"
             className="text-primary underline"
           >
             ukuikiukulele@gmail.com

@@ -5,7 +5,7 @@ const pages = [
   { title: "Shop", path: "/shop", icon: "🎸" },
   { title: "Community", path: "/community", icon: "📰" },
   { title: "Events", path: "/events", icon: "🎶" },
-  { title: "Q&A", path: "/qna", icon: "❓" },
+  { title: "Q&A", path: "/contact", icon: "❓" },
   { title: "About", path: "/about", icon: "ℹ️" },
   { title: "Contact", path: "/contact", icon: "☎️" },
 ];
