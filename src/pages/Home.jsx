@@ -26,8 +26,7 @@ export default function Home() {
           <div className="w-full max-w-lg text-white">
             <h1 className="mb-4 text-5xl font-black drop-shadow">UKUiki</h1>
             <p className="mb-6 text-lg text-white/90 drop-shadow">
-              Komunitas ukulele Indonesia yang seru dan kreatif. Temukan ukulele
-              impianmu & ikuti kegiatan seru bersama kami!
+              When art meets music, <br /> paintings and melodies <br /> through ukulele.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
