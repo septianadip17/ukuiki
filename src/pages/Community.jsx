@@ -13,7 +13,7 @@ export default function News() {
             <img
               src={item.image}
               alt={item.title}
-              className="h-48 w-full rounded-t-2xl object-cover"
+              className="h-64 w-6/12 rounded-t-2xl object-cover"
             />
             <div className="p-4">
               <h2 className="text-xl font-bold text-primary">{item.title}</h2>

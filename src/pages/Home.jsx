@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
 import unicornUkulele from "../assets/ukulele/unicorn-ukulele.jpg";
+import Shop from "./Shop";
+import Community from "./Community";
+import Events from "./Events";
 
 const pages = [
   { title: "Shop", path: "/shop", icon: "🎸" },
@@ -66,6 +69,9 @@ export default function Home() {
             </Link>
           ))}
         </div>
+        <Shop />
+        <Community />
+        <Events />
       </section>
     </>
   );
