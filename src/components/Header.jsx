@@ -18,7 +18,7 @@ const Header = () => {
           <div className="w-full max-w-lg text-white">
             <h1 className="mb-4 text-5xl font-black drop-shadow">UKUiki</h1>
             <p className="mb-6 text-lg text-white/90 drop-shadow">
-              When art meets music, <br /> paintings and melodies <br /> through
+              When art meets music, paintings and melodies <br /> paintings and melodies <br /> through
               ukulele.
             </p>
             <div className="flex flex-wrap gap-4">
