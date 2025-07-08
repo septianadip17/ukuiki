@@ -1,49 +1,63 @@
-// src/components/Navbar.jsx
-import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { NavHashLink } from "react-router-hash-link";
+import { useLocation } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 import ukuikiLogo from "../assets/ukuikiLogo.png";
 
-const MenuLink = ({ to, children, onClick }) => (
-  <NavLink
-    to={to}
-    onClick={onClick}
-    className={({ isActive }) =>
-      `block px-4 py-2 rounded-xl transition hover:bg-primary-light/20 ${
-        isActive ? "text-primary font-semibold" : "text-gray-700"
-      }`
-    }
-  >
-    {children}
-  </NavLink>
-);
+/* ---------- Konfigurasi satu pintu ---------- */
+const MENU = [
+  { label: "Home",      hash: "#top",        page: "/" },
+  { label: "Shop",      hash: "#shop",       page: "/shop" },
+  { label: "Community", hash: "#community",  page: "/community" },
+  { label: "Events",    hash: "#events",     page: "/events" },
+  { label: "About",     hash: "#about",      page: "/about" },
+  { label: "Contact",   hash: "#contact",    page: "/contact" },
+];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const toggle = () => setOpen(!open);
-  const close  = () => setOpen(false);
+  const { pathname, hash } = useLocation();
+
+  /* Tutup dropdown mobile tiap kali rute (atau hash) berubah */
+  useEffect(() => setOpen(false), [pathname, hash]);
+
+  /* ----- Komponen item menu ----- */
+  const MenuItem = ({ item, mobile = false }) => {
+    // aktif bila:  ➜ posisi di landing + hash sama,   atau  ➜ di page penuh
+    const isActive =
+      (pathname === "/" && hash === item.hash) || pathname === item.page;
+
+    return (
+      <NavHashLink
+        smooth
+        to={`/${item.hash}`}      /* selalu menuju landing+hash */
+        className={`block rounded-xl px-4 py-2 transition hover:bg-primary-light/20 ${
+          isActive ? "text-primary font-semibold" : "text-gray-700"
+        } ${mobile ? "" : "text-sm"}`}
+      >
+        {item.label}
+      </NavHashLink>
+    );
+  };
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow">
-      <div className="mx-auto flex max-w-5xl items-center justify-between p-4">
-        {/* Logo */}
-        <Link to="/" onClick={close}>
-          <img src={ukuikiLogo} alt="Ukuiki logo" className="h-16 w-auto" />
-        </Link>
+      <div className="mx-auto flex max-w-6xl items-center justify-between p-4">
+        {/* ----- Logo ----- */}
+        <NavHashLink smooth to="/#top" className="flex items-center">
+          <img src={ukuikiLogo} alt="Ukuiki logo" className="h-14 w-auto" />
+        </NavHashLink>
 
-        {/* —— DESKTOP NAV —— */}
+        {/* ----- Desktop nav ----- */}
         <nav className="hidden gap-2 md:flex">
-          <MenuLink to="/">Home</MenuLink>
-          <MenuLink to="/shop">Shop</MenuLink>
-          <MenuLink to="/community">Community</MenuLink>
-          <MenuLink to="/events">Events</MenuLink>
-          <MenuLink to="/about">About</MenuLink>
-          <MenuLink to="/contact">Contact</MenuLink>
+          {MENU.map((item) => (
+            <MenuItem key={item.hash} item={item} />
+          ))}
         </nav>
 
-        {/* —— BURGER BUTTON (mobile) —— */}
+        {/* ----- Burger button (mobile) ----- */}
         <button
-          onClick={toggle}
+          onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
           className="rounded-md p-2 text-2xl text-primary hover:bg-primary-light/10 md:hidden"
         >
@@ -51,18 +65,15 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* —— MOBILE DROPDOWN —— */}
+      {/* ----- Mobile dropdown ----- */}
       {open && (
-        <div className="md:hidden">
-          <nav className="mx-auto flex max-w-5xl flex-col gap-1 px-4 pb-4">
-            <MenuLink to="/"        onClick={close}>Home</MenuLink>
-            <MenuLink to="/shop"      onClick={close}>Shop</MenuLink>
-            <MenuLink to="/community"      onClick={close}>Community</MenuLink>
-            <MenuLink to="/events"  onClick={close}>Events</MenuLink>
-            <MenuLink to="/about"     onClick={close}>About</MenuLink>
-            <MenuLink to="/contact"   onClick={close}>Contact</MenuLink>
-          </nav>
-        </div>
+        <nav className="md:hidden">
+          <div className="mx-auto flex max-w-6xl flex-col gap-1 px-4 pb-4">
+            {MENU.map((item) => (
+              <MenuItem key={item.hash} item={item} mobile />
+            ))}
+          </div>
+        </nav>
       )}
     </header>
   );

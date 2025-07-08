@@ -1,28 +1,24 @@
+// src/App.jsx
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar.jsx";
-import Footer from "./components/Footer.jsx";
-import Home from "./pages/Home.jsx";
-import Shop from "./pages/Shop.jsx";
-import Community from "./pages/Community.jsx";
-import Events from "./pages/Events.jsx";
-import About from "./pages/About.jsx";
-import Contact from "./pages/Contact.jsx";
+import MainLayout from "./layouts/MainLayout";
+import Landing from "./pages/Landing";
+import Shop from "./pages/Shop";
+import Community from "./pages/Community";
+import Events from "./pages/Events";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 export default function App() {
   return (
-    <div className="flex min-h-screen flex-col bg-[#f9f9ff]">
-      <Navbar />
-      <main className="flex-1">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/shop" element={<Shop />} />
-          <Route path="/community" element={<Community />} />
-          <Route path="/events" element={<Events />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </main>
-      <Footer />
-    </div>
+    <Routes>
+      <Route element={<MainLayout />}>
+        <Route path="/" element={<Landing />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/community" element={<Community />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Route>
+    </Routes>
   );
 }
