@@ -13,6 +13,6 @@ export default [
     date: "2025-05-12",
     content:
       "Gripa Studio menjadi tuan rumah konser akustik yang menampilkan musisi lokal. Banyak yang datang untuk menikmati suasana santai dan musik yang indah.",
-        image: "/src/assets/community/concert-at-gripa.jpeg",
+    image: "/src/assets/community/concert-at-gripa.jpeg",
   },
 ];
