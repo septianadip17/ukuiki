@@ -9,10 +9,10 @@ export default [
   },
   {
     id: 2,
-    title: "Workshop Ukulele Pemula di Yogyakarta",
+    title: "Concert at Gripa Studio",
     date: "2025-05-12",
     content:
-      "Peserta diajarkan teknik dasar strumming dan chord dalam sesi 3 jam bersama mentor Ukuiki Jogja.",
-    image: "/img/news-jogja.jpg",
+      "Gripa Studio menjadi tuan rumah konser akustik yang menampilkan musisi lokal. Banyak yang datang untuk menikmati suasana santai dan musik yang indah.",
+        image: "/src/assets/community/concert-at-gripa.jpeg",
   },
 ];

@@ -1,11 +1,11 @@
-import news from "../data/news";
+import community from "../data/community";
 
-export default function News() {
+export default function Community() {
   return (
     <section className="mx-auto max-w-5xl px-4 py-8">
       <h1 className="mb-6 text-3xl font-bold text-primary">Berita Komunitas</h1>
       <div className="space-y-6">
-        {news.map((item) => (
+        {community.map((item) => (
           <article
             key={item.id}
             className="rounded-2xl bg-white shadow-md hover:shadow-lg transition"
