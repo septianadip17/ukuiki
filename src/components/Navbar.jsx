@@ -68,7 +68,7 @@ export default function Navbar() {
       {/* ----- Mobile dropdown ----- */}
       {open && (
         <nav className="md:hidden">
-          <div className="mx-auto flex max-w-6xl flex-col gap-1 px-4 pb-4">
+          <div className="mx-auto flex max-w-6xl flex-col gap-1 px-4 pb-4 ">
             {MENU.map((item) => (
               <MenuItem key={item.hash} item={item} mobile />
             ))}

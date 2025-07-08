@@ -1,31 +1,12 @@
 import { Link } from "react-router-dom";
+import Header from "../components/Header";
 
 export default function Landing() {
   return (
     <>
       <div id="top">
         {/* HERO */}
-        <section className="min-h-[70vh] flex flex-col items-center justify-center text-center bg-primary text-white px-4">
-          <h1 className="text-5xl font-black mb-4 drop-shadow">UKUiki</h1>
-          <p className="max-w-xl text-lg text-white/90 drop-shadow">
-            Komunitas ukulele kreatif Indonesia. Temukan ukulele impianmu &
-            ikuti event menarik!
-          </p>
-          <div className="mt-6 flex gap-4">
-            <Link
-              to="/shop"
-              className="bg-white text-primary px-6 py-3 rounded-full font-semibold shadow hover:bg-gray-100"
-            >
-              Lihat Ukulele
-            </Link>
-            <Link
-              to="/events"
-              className="bg-primary-light/20 px-6 py-3 rounded-full text-white hover:bg-primary-light/30"
-            >
-              Lihat Event
-            </Link>
-          </div>
-        </section>
+        <Header />
 
         {/* SHOP */}
         <Section
@@ -58,17 +39,6 @@ export default function Landing() {
         >
           <p className="text-center text-gray-600">
             Ikuti jadwal workshop, konser ukulele, dan lebih banyak keseruan 🎶
-          </p>
-        </Section>
-
-        {/* QNA */}
-        <Section
-          id="qna"
-          title="Q&A dan Pemesanan"
-          cta={{ label: "Tanya atau Pesan", to: "/qna" }}
-        >
-          <p className="text-center text-gray-600">
-            Punya pertanyaan tentang ukulele atau kelas? Tanyakan di sini!
           </p>
         </Section>
 
