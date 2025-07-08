@@ -32,7 +32,7 @@ const Header = () => {
                 to="/events"
                 className="rounded-full bg-primary-light px-6 py-3 text-white hover:bg-primary-light/10 transition duration-300 font-semibold shadow"
               >
-                Events
+                Events & Workshops
               </Link>
             </div>
           </div>
