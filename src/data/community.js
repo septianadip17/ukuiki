@@ -5,7 +5,7 @@ export default [
     date: "2025-06-22",
     content:
       "Komunitas Ukuiki menggelar jam session dan open mic di Museum Bank Indonesia. Acara ini diikuti 30+ pemain ukulele dari berbagai usia!",
-    image: "/src/assets/community/museum-bi.jpg",
+    image: "/community/museum-bi.jpg",
   },
   {
     id: 2,
@@ -13,6 +13,6 @@ export default [
     date: "2025-05-12",
     content:
       "Gripa Studio menjadi tuan rumah konser akustik yang menampilkan musisi lokal. Banyak yang datang untuk menikmati suasana santai dan musik yang indah.",
-    image: "/src/assets/community/concert-at-gripa.jpeg",
+    image: "/community/concert-at-gripa.jpeg",
   },
 ];

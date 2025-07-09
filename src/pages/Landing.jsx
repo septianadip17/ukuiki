@@ -1,5 +1,6 @@
 import Hero from "../components/Hero";
 import Section from "../components/Section";
+import ProductPreview from "../components/ProductPreview";
 
 export default function Landing() {
   return (
@@ -11,10 +12,10 @@ export default function Landing() {
         title="Ukulele Ready Stock"
         cta={{ label: "Lihat Semua Produk", to: "/shop" }}
       >
-        <p className="text-center text-gray-600">
+        <p className="text-center text-gray-600 mb-4">
           Cek koleksi ukulele pilihan kami 🎸
         </p>
-        {/* TODO: Tambahkan 3 produk populer di sini */}
+        <ProductPreview />
       </Section>
 
       <Section
