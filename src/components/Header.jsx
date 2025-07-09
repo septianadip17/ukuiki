@@ -7,7 +7,7 @@ const Header = () => {
       {" "}
       {/* HERO */}
       <section
-        className="relative flex min-h-[65vh] items-center bg-cover bg-center px-4"
+        className="relative flex min-h-[60vh] items-center bg-cover bg-center px-4"
         style={{ backgroundImage: `url(${unicornUkulele})` }}
       >
         {/* Overlay */}
