@@ -1,18 +1,19 @@
 import { Link } from "react-router-dom";
-import Header from "../components/Header";
+import Hero from "../components/Hero";
 
 export default function Landing() {
   return (
     <>
       <div id="top">
         {/* HERO */}
-        <Header />
+        <Hero />
 
         {/* SHOP */}
         <Section
           id="shop"
           title="Ukulele Ready Stock"
           cta={{ label: "Lihat Semua Produk", to: "/shop" }}
+          className="border-2 border-red-600"
         >
           <p className="text-center text-gray-600">
             Cek koleksi ukulele pilihan kami 🎸

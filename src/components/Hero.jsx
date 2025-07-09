@@ -1,7 +1,7 @@
 import React from "react";
 import unicornUkulele from "../assets/ukulele/unicorn-ukulele.jpg";
 import { Link } from "react-router-dom";
-const Header = () => {
+const Hero = () => {
   return (
     <div>
       {" "}
@@ -42,4 +42,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Hero;
