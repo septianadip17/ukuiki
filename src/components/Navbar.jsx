@@ -4,6 +4,7 @@ import { useLocation, NavLink } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
 import { FiMenu, FiX } from "react-icons/fi";
 import ukuikiLogo from "../assets/ukuikiLogo.png";
+import PropTypes from "prop-types";
 
 /* ---------- Satu sumber data menu ---------- */
 const MENU = [
@@ -25,14 +26,7 @@ export default function Navbar() {
 
   /* ----- Sub‑komponen item menu ----- */
   const MenuItem = ({ item, mobile = false }) => {
-    /* Tentukan tujuan link:
-       - Jika sedang di landing  → scroll ke hash (#section)
-       - Kalau di halaman lain   → navigasi ke page penuh (/section) */
     const dest = isLanding ? `/${item.hash}` : item.page;
-
-    /* Aktif jika:
-       - (Landing) hash cocok, atau
-       - (Halaman penuh) pathname cocok */
     const isActive = isLanding ? hash === item.hash : pathname === item.page;
 
     /* Gunakan NavHashLink untuk hash, NavLink untuk page penuh */
@@ -44,7 +38,7 @@ export default function Navbar() {
         to={dest}
         aria-current={isActive ? "page" : undefined}
         className={`block rounded-xl px-4 py-2 transition hover:bg-primary-light/20 ${
-          isActive ? "text-primary font-semibold" : "text-gray-700"
+          isActive ? "text-primary font-bold bg-primary-light/10 " : "text-gray-700"
         } ${mobile ? "" : "text-sm"}`}
       >
         {item.label}
@@ -90,3 +84,14 @@ export default function Navbar() {
     </header>
   );
 }
+
+Navbar.propTypes = {
+  mobile: PropTypes.bool,
+  item: PropTypes.shape({
+    label: PropTypes.string,
+    hash: PropTypes.string,
+    page: PropTypes.string,
+  }),
+};
+
+
