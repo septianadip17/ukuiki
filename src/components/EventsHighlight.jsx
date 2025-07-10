@@ -1,34 +1,26 @@
-// src/components/EventsHighlight.jsx
+
 import { Link } from "react-router-dom";
-import events from "../data/events";
 
-export default function EventsHighlight({ id }) {
+export default function EventsHighlight() {
   return (
-    <section id={id} className="mx-auto max-w-6xl px-4 py-16">
-      <h2 className="mb-6 text-3xl font-bold text-primary">Event Terdekat</h2>
-
-      <div className="grid gap-6 md:grid-cols-2">
-        {events.slice(0, 2).map((event) => (
-          <article key={event.id} className="rounded-2xl bg-white p-4 shadow">
-            <h3 className="text-xl font-semibold text-primary">
-              {event.title}
-            </h3>
-            <p className="text-sm text-gray-600 mb-2">
-              {event.date} · {event.location}
-            </p>
-            <p className="text-gray-700">{event.description}</p>
-          </article>
-        ))}
-      </div>
-
-      <div className="mt-8 text-center">
+    <div className="grid md:grid-cols-2 items-center gap-6">
+      <img
+        src="/community/museum-bi.jpg"
+        alt="Event"
+        className="rounded-lg shadow order-2 md:order-1"
+      />
+      <div className="order-1 md:order-2">
+        <h3 className="text-xl font-bold text-primary mb-2">Event Terdekat</h3>
+        <p className="text-gray-700 mb-4">
+          Jangan sampai ketinggalan jadwal konser, workshop, dan keseruan lainnya!
+        </p>
         <Link
           to="/events"
-          className="inline-block rounded-full bg-primary px-6 py-3 text-white hover:bg-primary-dark"
+          className="inline-block px-6 py-2 bg-primary text-white rounded-full hover:bg-primary-dark transition"
         >
-          Lihat Semua Event
+          Lihat Jadwal
         </Link>
       </div>
-    </section>
+    </div>
   );
 }

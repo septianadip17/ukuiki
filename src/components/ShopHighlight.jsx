@@ -1,38 +1,58 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
 import products from "../data/products";
 
-export default function ShopHighlight({ id }) {
+export default function ShopHighlight() {
+  const featured = products.slice(0, 6);
+
   return (
-    <section id={id} className="mx-auto max-w-6xl px-4 py-16">
-      <h2 className="mb-6 text-3xl font-bold text-primary">
-        Ukulele Ready Stock
-      </h2>
-
-      {/* preview grid (3 item) */}
-      <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
-        {products.slice(0, 3).map((p) => (
-          <article key={p.id} className="rounded-2xl bg-white shadow">
-            <img
-              src={p.image}
-              alt={p.name}
-              className="h-40 w-full object-cover rounded-t-2xl"
-            />
-            <div className="p-4">
-              <h3 className="font-semibold">{p.name}</h3>
-              <p className="text-primary-light font-bold">{p.price}</p>
+    <div className="relative">
+      <Swiper
+        modules={[Navigation, Pagination]}
+        spaceBetween={24}
+        slidesPerView={1}
+        navigation
+        pagination={{ clickable: true }}
+        breakpoints={{
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        }}
+      >
+        {featured.map((product) => (
+          <SwiperSlide key={product.id}>
+            <div className="rounded-xl shadow overflow-hidden bg-white hover:shadow-lg transition">
+              <img
+                src={product.image}
+                alt={product.name}
+                className="aspect-video w-full object-cover"
+              />
+              <div className="p-4">
+                <h3 className="text-lg font-semibold text-primary mb-1">
+                  {product.name}
+                </h3>
+                <p className="text-sm text-gray-600 line-clamp-3">
+                  {product.desc}
+                </p>
+                <div className="mt-2 text-primary font-bold">
+                  {product.price}
+                </div>
+                <a
+                  href={product.link}
+                  target="_blank"
+                  className="mt-4 inline-block rounded-full bg-primary text-white px-4 py-2 text-sm hover:bg-primary-dark"
+                >
+                  Beli Sekarang
+                </a>
+              </div>
             </div>
-          </article>
+          </SwiperSlide>
         ))}
-      </div>
-
-      {/* CTA */}
-      <div className="mt-8 text-center">
-        <Link
-          to="/shop"
-          className="inline-block rounded-full bg-primary px-6 py-3 text-white hover:bg-primary-dark"
-        >
-          Lihat Semua Produk
-        </Link>
-      </div>
-    </section>
+      </Swiper>
+    </div>
   );
 }

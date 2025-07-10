@@ -5,6 +5,7 @@ export default [
     price: "Rp. xxx.xxx",
     image: "/ukulele/hibiscusSoprano.jpg",
     desc: "...",
+    link: "https://wa.me/62818749604?text=Saya%20mau%20beli%20ukulele%20Hibiscus%20painting%20on%20soprano",
   },
   {
     id: 2,
@@ -12,6 +13,7 @@ export default [
     price: "Rp. xxx.xxx",
     image: "/ukulele/batikSoprano.jpg",
     desc: "...",
+    link: "https://wa.me/62818749604?text=Saya%20mau%20beli%20ukulele%20Batik%20painting%20on%20soprano",
   },
   {
     id: 3,
@@ -19,6 +21,7 @@ export default [
     price: "Rp. x.xxx.xxx",
     image: "/ukulele/dayakTenor.jpg",
     desc: "...",
+    link: "https://wa.me/62818749604?text=Saya%20mau%20beli%20ukulele%20Dayak%20painting%20on%20tenor%20trembesi",
   },
   {
     id: 4,
@@ -26,20 +29,22 @@ export default [
     price: "Rp. 140.000",
     image: "/tshirt/ukuiki-tshirt-black.jpeg",
     desc: "...",
+    link: "https://wa.me/62818749604?text=Saya%20mau%20beli%20UKUiki%20T-Shirt%20Black",
   },
-   {
+  {
     id: 5,
     name: "UKUiki T-Shirt Purple",
     price: "Rp. 140.000",
     image: "/tshirt/ukuiki-tshirt-purple.jpeg",
     desc: "...",
+    link: "https://wa.me/62818749604?text=Saya%20mau%20beli%20UKUiki%20T-Shirt%20Purple",
   },
-   {
+  {
     id: 6,
     name: "UKUiki T-Shirt Lilac",
     price: "Rp. 140.000",
     image: "/tshirt/ukuiki-tshirt-lilac.jpeg",
     desc: "...",
-  }
-
+    link: "https://wa.me/62818749604?text=Saya%20mau%20beli%20UKUiki%20T-Shirt%20Lilac",
+  },
 ];

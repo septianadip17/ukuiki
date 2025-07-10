@@ -1,44 +1,26 @@
-// src/components/CommunityHighlight.jsx
+
 import { Link } from "react-router-dom";
-import ioefImg from "../assets/community/ioef-mbloc.jpg";
-import museumImg from "../assets/community/museum-bi.jpg";
 
-export default function CommunityHighlight({ id }) {
+export default function CommunityHighlight() {
   return (
-    <section id={id} className="mx-auto max-w-6xl px-4 py-16">
-      <h2 className="mb-6 text-3xl font-bold text-primary">
-        Kegiatan Komunitas
-      </h2>
-
-      <div className="grid gap-6 sm:grid-cols-2">
-        {[
-          { img: ioefImg, title: "IOEF M Bloc" },
-          { img: museumImg, title: "Workshop Museum BI" },
-        ].map((event) => (
-          <article
-            key={event.title}
-            className="rounded-2xl overflow-hidden bg-white shadow"
-          >
-            <img
-              src={event.img}
-              alt={event.title}
-              className="h-52 w-full object-cover"
-            />
-            <div className="p-4">
-              <h3 className="font-semibold text-lg">{event.title}</h3>
-            </div>
-          </article>
-        ))}
-      </div>
-
-      <div className="mt-8 text-center">
+    <div className="flex flex-col-reverse md:flex-row items-center gap-6">
+      <div className="md:w-1/2">
+        <h3 className="text-xl font-bold text-primary mb-2">Kegiatan Komunitas</h3>
+        <p className="text-gray-700 mb-4">
+          Dari konser di MBloc hingga gathering santai, UKUiki selalu punya cerita seru!
+        </p>
         <Link
           to="/community"
-          className="inline-block rounded-full bg-primary px-6 py-3 text-white hover:bg-primary-dark"
+          className="inline-block px-6 py-2 bg-primary text-white rounded-full hover:bg-primary-dark transition"
         >
-          Lihat Semua Kegiatan
+          Lihat Dokumentasi
         </Link>
       </div>
-    </section>
+      <img
+        src="/community/concert-at-gripa.jpeg"
+        alt="Community event"
+        className="md:w-1/2 w-full rounded-lg shadow"
+      />
+    </div>
   );
 }

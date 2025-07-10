@@ -1,23 +1,26 @@
-// src/components/AboutHighlight.jsx
+
 import { Link } from "react-router-dom";
-import ukuikiLogo from "../assets/ukuikiLogo.png";
 
-export default function AboutHighlight({ id }) {
+export default function AboutHighlight() {
   return (
-    <section id={id} className="mx-auto max-w-6xl px-4 py-16 text-center">
-      <img src={ukuikiLogo} alt="Ukuiki Logo" className="mx-auto mb-4 h-20" />
-      <h2 className="mb-4 text-3xl font-bold text-primary">Tentang Ukuiki</h2>
-      <p className="max-w-2xl mx-auto text-gray-700 mb-6">
-        Ukuiki adalah komunitas ukulele yang aktif berbagi karya, event, dan
-        energi positif. Bergabunglah untuk berkreasi bersama melalui musik!
-      </p>
-
-      <Link
-        to="/about"
-        className="inline-block rounded-full bg-primary px-6 py-3 text-white hover:bg-primary-dark"
-      >
-        Pelajari Selengkapnya
-      </Link>
-    </section>
+    <div className="flex flex-col md:flex-row items-center gap-6">
+      <div className="md:w-1/2">
+        <h3 className="text-xl font-bold text-primary mb-2">Tentang UKUiki</h3>
+        <p className="text-gray-700 mb-4">
+          UKUiki adalah rumah bagi para pecinta ukulele dari berbagai latar belakang. Kami percaya bahwa musik bisa menyatukan semua orang.
+        </p>
+        <Link
+          to="/about"
+          className="inline-block px-6 py-2 bg-primary text-white rounded-full hover:bg-primary-dark transition"
+        >
+          Tentang Kami
+        </Link>
+      </div>
+      <img
+        src="/community/museum-bi.jpg"
+        alt="About UKUiki"
+        className="md:w-1/2 w-full rounded-lg shadow"
+      />
+    </div>
   );
 }

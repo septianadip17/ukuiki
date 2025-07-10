@@ -1,6 +1,10 @@
 import Hero from "../components/Hero";
 import Section from "../components/Section";
-import ProductPreview from "../components/ProductPreview";
+import CommunityHighlight from "../components/CommunityHighlight";
+import EventsHighlight from "../components/EventsHighlight";
+import AboutHighlight from "../components/AboutHighlight";
+import ContactHighlight from "../components/ContactHighlight";
+import ShopHighlight from "../components/ShopHighlight";
 
 export default function Landing() {
   return (
@@ -16,51 +20,36 @@ export default function Landing() {
         <p className="text-center text-gray-600 mb-4 ">
           Cek koleksi ukulele pilihan kami 🎸
         </p>
-        <ProductPreview />
+        <ShopHighlight />
       </Section>
 
       {/* Community Highlights */}
       <Section
         id="community"
         title="Community Highlights"
-        cta={{ label: "Baca Selengkapnya", to: "/community" }}
       >
-        <p className="text-center text-gray-600">
-          Lihat aktivitas komunitas dan dokumentasi seru kami 📰
-        </p>
+        <CommunityHighlight />
       </Section>
 
       {/* Events */}
       <Section
         id="events"
-        title="Event Terdekat"
-        cta={{ label: "Lihat Semua Event", to: "/events" }}
       >
-        <p className="text-center text-gray-600">
-          Ikuti jadwal workshop, konser ukulele, dan lebih banyak keseruan 🎶
-        </p>
+        <EventsHighlight />
       </Section>
 
       {/* About */}
       <Section
         id="about"
-        title="Tentang UKUiki"
-        cta={{ label: "Lihat Detail", to: "/about" }}
       >
-        <p className="text-center text-gray-600">
-          Kenalan lebih dekat dengan komunitas UKUiki 💜
-        </p>
+        <AboutHighlight />
       </Section>
 
       {/* Contact */}
       <Section
         id="contact"
-        title="Kontak Kami"
-        cta={{ label: "Hubungi Kami", to: "/contact" }}
       >
-        <p className="text-center text-gray-600">
-          Punya pertanyaan atau kerja sama? Kami siap bantu!
-        </p>
+        <ContactHighlight />
       </Section>
     </div>
   );
