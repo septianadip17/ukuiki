@@ -7,17 +7,19 @@ export default function Landing() {
     <div id="top">
       <Hero />
 
+      {/* Shop */}
       <Section
         id="shop"
         title="Ukulele Ready Stock"
         cta={{ label: "Lihat Semua Produk", to: "/shop" }}
       >
-        <p className="text-center text-gray-600 mb-4">
+        <p className="text-center text-gray-600 mb-4 ">
           Cek koleksi ukulele pilihan kami 🎸
         </p>
         <ProductPreview />
       </Section>
 
+      {/* Community Highlights */}
       <Section
         id="community"
         title="Community Highlights"
@@ -28,6 +30,7 @@ export default function Landing() {
         </p>
       </Section>
 
+      {/* Events */}
       <Section
         id="events"
         title="Event Terdekat"
@@ -38,6 +41,7 @@ export default function Landing() {
         </p>
       </Section>
 
+      {/* About */}
       <Section
         id="about"
         title="Tentang UKUiki"
@@ -48,6 +52,7 @@ export default function Landing() {
         </p>
       </Section>
 
+      {/* Contact */}
       <Section
         id="contact"
         title="Kontak Kami"
