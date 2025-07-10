@@ -8,36 +8,47 @@ export default function Shop() {
       </h1>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {products.map((p) => (
-          <article
-            key={p.id}
-            className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow transition hover:shadow-lg"
-          >
-            <img
-              src={p.image}
-              alt={p.name}
-              className="h-54 w-full object-cover transition duration-300 group-hover:scale-105"
-            />
-            <div className="flex flex-1 flex-col p-4">
-              <h2 className="text-lg font-semibold">{p.name}</h2>
-              <p className="mb-2 text-sm text-gray-500">{p.desc}</p>
-              <span className="mb-4 text-primary-light font-bold">
-                {p.price}
-              </span>
-
-              <a
-                href={`https://wa.me/6289696135242?text=Halo%20Ukuiki%2C%20saya%20mau%20pesan%20${encodeURIComponent(
-                  p.name
-                )}`}
-                target="_blank"
-                className="mt-auto inline-block rounded-full bg-primary px-4 py-2 text-center text-white"
-              >
-                Beli via WhatsApp
-              </a>
-            </div>
-          </article>
+        {products.map((product) => (
+          <ProductCard key={product.id} product={product} />
         ))}
       </div>
     </section>
+  );
+}
+
+function ProductCard({ product }) {
+  return (
+    <article className="flex flex-col rounded-2xl bg-white shadow-md transition hover:shadow-xl">
+      <div className="overflow-hidden">
+        <img
+          src={product.image}
+          alt={product.name}
+          className="w-full h-52 object-cover transition duration-300 group-hover:scale-105"
+        />
+      </div>
+
+      <div className="flex flex-1 flex-col justify-between p-4">
+        <div>
+          <h2 className="text-lg font-semibold text-primary">{product.name}</h2>
+          <p className="mt-1 text-sm text-gray-600">{product.desc}</p>
+        </div>
+
+        <div className="mt-4">
+          <span className="block mb-3 font-bold text-primary-light">
+            {product.price}
+          </span>
+          <a
+            href={`https://wa.me/6289696135242?text=Halo%20Ukuiki%2C%20saya%20mau%20pesan%20${encodeURIComponent(
+              product.name
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block w-full rounded-full bg-primary px-4 py-2 text-center text-white hover:bg-primary-dark transition"
+          >
+            Beli via WhatsApp
+          </a>
+        </div>
+      </div>
+    </article>
   );
 }

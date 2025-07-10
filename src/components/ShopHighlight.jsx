@@ -27,7 +27,7 @@ export default function ShopHighlight() {
           <SwiperSlide key={product.id}>
             <div className="rounded-xl shadow overflow-hidden bg-white hover:shadow-lg transition">
               <img
-                src={product.image}
+                src={product.image.replace("/src/assets", "")}
                 alt={product.name}
                 className="aspect-video w-full object-cover"
               />
