@@ -7,6 +7,7 @@ import Community from "./pages/Community";
 import Events from "./pages/Events";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import ProductDetail from "./pages/ProductDetail";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
         <Route path="/events" element={<Events />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/product/:id" element={<ProductDetail />} />
       </Route>
     </Routes>
   );

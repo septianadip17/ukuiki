@@ -17,38 +17,26 @@ export default function Landing() {
         title="Ukulele Ready Stock"
         cta={{ label: "Lihat Semua Produk", to: "/shop" }}
       >
-        <p className="text-center text-gray-600 mb-4 ">
-          Cek koleksi ukulele pilihan kami 🎸
-        </p>
         <ShopHighlight />
       </Section>
 
       {/* Community Highlights */}
-      <Section
-        id="community"
-        title="Community Highlights"
-      >
+      <Section id="community" title="Community Highlights">
         <CommunityHighlight />
       </Section>
 
       {/* Events */}
-      <Section
-        id="events"
-      >
+      <Section id="events">
         <EventsHighlight />
       </Section>
 
       {/* About */}
-      <Section
-        id="about"
-      >
+      <Section id="about">
         <AboutHighlight />
       </Section>
 
       {/* Contact */}
-      <Section
-        id="contact"
-      >
+      <Section id="contact">
         <ContactHighlight />
       </Section>
     </div>
