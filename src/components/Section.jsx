@@ -1,9 +1,11 @@
-import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-
+import { Link } from "react-router-dom";
 export default function Section({ id, title, cta, children, className = "" }) {
   return (
-    <section id={id} className={`px-4 py-16 mx-auto max-w-6xl ${className}`}>
+    <section
+      id={id}
+      className={`px-4 py-16 mx-auto max-w-6xl scroll-mt-14 ${className}`}
+    >
       {/* Title */}
       {title && (
         <h2 className="text-3xl font-bold text-primary mb-4 text-center md:text-left">
@@ -28,14 +30,15 @@ export default function Section({ id, title, cta, children, className = "" }) {
     </section>
   );
 }
-
+// ...existing code...
 Section.propTypes = {
-  id: PropTypes.string,
-  title: PropTypes.node,
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string,
   cta: PropTypes.shape({
-    to: PropTypes.string,
-    label: PropTypes.node,
+    to: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
   }),
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
   className: PropTypes.string,
 };
+Section.displayName = "Section";

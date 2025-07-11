@@ -2,25 +2,25 @@
 export default function About() {
   return (
     <section className="relative">
-      {/* ── Background gradient ──────────────────────────── */}
+      {/* ── Background Gradient ─ */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary/10 via-white to-primary/5" />
 
       <div className="mx-auto max-w-5xl px-4 py-16">
-        {/* ── HERO ───────────────────────────────────────── */}
+        {/* ── Hero Section ─ */}
         <header className="text-center">
           <h1 className="mb-4 text-4xl font-extrabold text-primary drop-shadow">
             Tentang <span className="text-primary-light">UKUiki</span>
           </h1>
           <p className="mx-auto mb-10 max-w-2xl text-lg text-gray-700">
-            Ukuiki adalah komunitas kreatif pecinta ukulele. Kami berbagi
+            UKUiki adalah komunitas kreatif pecinta ukulele. Kami berbagi
             inspirasi, karya, dan pengetahuan melalui pertemuan offline,
             workshop, serta media sosial.
           </p>
         </header>
 
-        {/* ── CONTENT 2‑COL ─────────────────────────────── */}
+        {/* ── 2-Column Layout ─ */}
         <div className="grid gap-10 lg:grid-cols-2">
-          {/* TEXT SIDE */}
+          {/* ── Text Column ─ */}
           <div className="space-y-6 text-gray-700">
             <section>
               <h2 className="mb-2 text-2xl font-semibold text-primary">
@@ -40,11 +40,11 @@ export default function About() {
               <ul className="list-disc space-y-1 pl-5">
                 <li>Mudah dimainkan & terjangkau.</li>
                 <li>Portabel—bisa dibawa ke mana saja.</li>
-                <li>Cocok untuk kolaborasi dan jam session.</li>
+                <li>Cocok untuk kolaborasi dan jam session.</li>
               </ul>
             </section>
 
-            {/* CTA */}
+            {/* ── Instagram CTA ─ */}
             <a
               href="https://instagram.com/ukuiki"
               target="_blank"
@@ -55,7 +55,7 @@ export default function About() {
             </a>
           </div>
 
-          {/* INSTAGRAM EMBED */}
+          {/* ── Instagram Embed ─ */}
           <div className="flex justify-center">
             <div className="w-full overflow-hidden rounded-xl shadow-lg">
               <iframe
@@ -65,7 +65,7 @@ export default function About() {
                 className="aspect-[4/5] w-full"
                 frameBorder="0"
                 scrolling="no"
-                allowTransparency="true"
+                style={{ backgroundColor: "transparent" }} // ✅ fix warning
               ></iframe>
             </div>
           </div>

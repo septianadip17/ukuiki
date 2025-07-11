@@ -4,9 +4,8 @@ import { useLocation, NavLink } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
 import { FiMenu, FiX } from "react-icons/fi";
 import ukuikiLogo from "../assets/ukuikiLogo.png";
-import PropTypes from "prop-types";
 
-/* ---------- Satu sumber data menu ---------- */
+/* ---------- Data menu utama ---------- */
 const MENU = [
   { label: "Home", hash: "#top", page: "/" },
   { label: "Shop", hash: "#shop", page: "/shop" },
@@ -21,24 +20,25 @@ export default function Navbar() {
   const { pathname, hash } = useLocation();
   const isLanding = pathname === "/";
 
-  /* Tutup dropdown mobile tiap kali rute atau hash berubah */
+  // Tutup mobile menu saat route berubah
   useEffect(() => setOpen(false), [pathname, hash]);
 
-  /* ----- Sub‑komponen item menu ----- */
+  // Komponen menu
   const MenuItem = ({ item, mobile = false }) => {
     const dest = isLanding ? `/${item.hash}` : item.page;
     const isActive = isLanding ? hash === item.hash : pathname === item.page;
 
-    /* Gunakan NavHashLink untuk hash, NavLink untuk page penuh */
     const Component = dest.includes("#") ? NavHashLink : NavLink;
 
     return (
       <Component
-        smooth
         to={dest}
+        smooth={dest.includes("#") ? true : undefined} // hindari warning
         aria-current={isActive ? "page" : undefined}
         className={`block rounded-xl px-4 py-2 transition hover:bg-primary-light/20 ${
-          isActive ? "text-primary font-bold bg-primary-light/10 " : "text-gray-700"
+          isActive
+            ? "text-primary font-bold bg-primary-light/10"
+            : "text-gray-700"
         } ${mobile ? "" : "text-sm"}`}
       >
         {item.label}
@@ -49,19 +49,19 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-white shadow">
       <div className="mx-auto flex max-w-6xl items-center justify-between p-4">
-        {/* Logo — klik kembali ke atas landing */}
+        {/* Logo */}
         <NavHashLink smooth to="/#top" className="flex items-center">
           <img src={ukuikiLogo} alt="Ukuiki logo" className="h-14 w-auto" />
         </NavHashLink>
 
-        {/* ----- Desktop nav ----- */}
+        {/* Desktop nav */}
         <nav className="hidden gap-2 md:flex">
           {MENU.map((item) => (
             <MenuItem key={item.label} item={item} />
           ))}
         </nav>
 
-        {/* ----- Burger button (mobile) ----- */}
+        {/* Burger button (mobile) */}
         <button
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
@@ -71,7 +71,7 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* ----- Mobile dropdown ----- */}
+      {/* Mobile dropdown */}
       {open && (
         <nav className="md:hidden">
           <div className="mx-auto flex max-w-6xl flex-col gap-1 px-4 pb-4">
@@ -84,14 +84,3 @@ export default function Navbar() {
     </header>
   );
 }
-
-Navbar.propTypes = {
-  mobile: PropTypes.bool,
-  item: PropTypes.shape({
-    label: PropTypes.string,
-    hash: PropTypes.string,
-    page: PropTypes.string,
-  }),
-};
-
-
