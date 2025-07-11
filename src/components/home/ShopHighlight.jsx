@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import products from "../data/products";
+import products from "../../data/products";
 
 export default function ShopHighlight() {
   const featured = products.slice(0, 6);

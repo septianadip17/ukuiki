@@ -1,7 +1,7 @@
 // src/components/ProductPreview.jsx
 import { useMemo } from "react";
 import PropTypes from "prop-types";
-import products from "../data/products";
+import products from "../../data/products";
 import ProductCard from "./ProductCard";
 
 /**

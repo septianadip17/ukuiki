@@ -2,8 +2,8 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { FiShoppingBag } from "react-icons/fi";
 import products from "../data/products";
-import ImageModal from "../components/ImageModal";
-import ProductPreview from "../components/ProductPreview";
+import ImageModal from "../components/shop/ImageModal";
+import ProductPreview from "../components/Shop/ProductPreview";
 
 export default function ProductDetail() {
   const { productId } = useParams();

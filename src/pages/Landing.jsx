@@ -1,10 +1,10 @@
-import Hero from "../components/Hero";
-import Section from "../components/Section";
-import CommunityHighlight from "../components/CommunityHighlight";
-import EventsHighlight from "../components/EventsHighlight";
-import AboutHighlight from "../components/AboutHighlight";
-import ContactHighlight from "../components/ContactHighlight";
-import ShopHighlight from "../components/ShopHighlight";
+import Hero from "../components/home/Hero";
+import Section from "../components/home/Section";
+import CommunityHighlight from "../components/home/CommunityHighlight";
+import EventsHighlight from "../components/home/EventsHighlight";
+import AboutHighlight from "../components/home/AboutHighlight";
+import ContactHighlight from "../components/home/ContactHighlight";
+import ShopHighlight from "../components/home/ShopHighlight";
 
 export default function Landing() {
   return (
