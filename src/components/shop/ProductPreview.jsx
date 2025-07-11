@@ -24,7 +24,7 @@ export default function ProductPreview({ excludeId }) {
   }, [excludeId]);
 
   useEffect(() => {
-    const timeout = setTimeout(() => setLoading(false), 10000);
+    const timeout = setTimeout(() => setLoading(false), 1000);
     return () => clearTimeout(timeout);
   }, []);
 
