@@ -1,8 +1,8 @@
-// src/components/Navbar.jsx
 import { useState, useEffect } from "react";
 import { useLocation, NavLink } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
 import { FiMenu, FiX } from "react-icons/fi";
+import PropTypes from "prop-types";
 import ukuikiLogo from "../assets/ukuikiLogo.png";
 
 /* ---------- Data menu utama ---------- */
@@ -22,17 +22,15 @@ export default function Navbar() {
 
   useEffect(() => setOpen(false), [pathname, hash]);
 
-  // Komponen menu
-  const MenuItem = ({ item, mobile = false }) => {
+  const MenuItem = ({ item, mobile }) => {
     const dest = isLanding ? `/${item.hash}` : item.page;
     const isActive = isLanding ? hash === item.hash : pathname === item.page;
-
     const Component = dest.includes("#") ? NavHashLink : NavLink;
 
     return (
       <Component
         to={dest}
-        smooth={dest.includes("#") ? true : undefined} // hindari warning
+        smooth={dest.includes("#") ? true : undefined}
         aria-current={isActive ? "page" : undefined}
         className={`block rounded-xl px-4 py-2 transition hover:bg-primary-light/20 ${
           isActive
@@ -45,22 +43,29 @@ export default function Navbar() {
     );
   };
 
+  // 🟢 Tambahkan propTypes di sini
+  MenuItem.propTypes = {
+    item: PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      hash: PropTypes.string,
+      page: PropTypes.string.isRequired,
+    }).isRequired,
+    mobile: PropTypes.bool,
+  };
+
   return (
     <header className="sticky top-0 z-50 bg-white shadow">
       <div className="mx-auto flex max-w-6xl items-center justify-between p-4">
-        {/* Logo */}
         <NavHashLink smooth to="/#top" className="flex items-center">
           <img src={ukuikiLogo} alt="Ukuiki logo" className="h-14 w-auto" />
         </NavHashLink>
 
-        {/* Desktop nav */}
         <nav className="hidden gap-2 md:flex">
           {MENU.map((item) => (
             <MenuItem key={item.label} item={item} />
           ))}
         </nav>
 
-        {/* Burger button (mobile) */}
         <button
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
@@ -70,7 +75,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile dropdown */}
       {open && (
         <nav className="md:hidden">
           <div className="mx-auto flex max-w-6xl flex-col gap-1 px-4 pb-4">
