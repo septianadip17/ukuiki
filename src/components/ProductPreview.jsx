@@ -1,18 +1,32 @@
-// ProductPreview.jsx
-import products from "../data/products";
+import { useMemo } from "react";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import products from "../data/products";
+
+function shuffleArray(array) {
+  const result = [...array];
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]];
+  }
+  return result;
+}
 
 export default function ProductPreview({ excludeId }) {
-  const filtered = excludeId
-    ? products.filter((p) => p.id !== excludeId).slice(0, 3)
-    : products.slice(0, 3);
+  const randomProducts = useMemo(() => {
+    const filtered = excludeId
+      ? products.filter((p) => p.id !== Number(excludeId))
+      : [...products];
+    return shuffleArray(filtered).slice(0, 3);
+  }, [excludeId]);
 
   return (
-    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {filtered.map((p) => (
-        <article
+    <div className="flex gap-6 overflow-x-auto md:grid md:grid-cols-3 md:overflow-visible scroll-smooth snap-x md:snap-none">
+      {randomProducts.map((p) => (
+        <Link
           key={p.id}
-          className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow transition hover:shadow-lg"
+          to={`/shop/${p.id}`}
+          className="group snap-start flex-shrink-0 w-72 md:w-auto flex flex-col overflow-hidden rounded-2xl bg-white shadow transition hover:shadow-lg"
         >
           <img
             src={p.image}
@@ -27,11 +41,12 @@ export default function ProductPreview({ excludeId }) {
               Lihat Detail
             </span>
           </div>
-        </article>
+        </Link>
       ))}
     </div>
   );
 }
+
 ProductPreview.propTypes = {
-  excludeId: PropTypes.string,
+  excludeId: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
