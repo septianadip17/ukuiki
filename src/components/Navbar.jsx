@@ -43,7 +43,6 @@ export default function Navbar() {
     );
   };
 
-  // 🟢 Tambahkan propTypes di sini
   MenuItem.propTypes = {
     item: PropTypes.shape({
       label: PropTypes.string.isRequired,
