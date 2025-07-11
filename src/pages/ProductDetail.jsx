@@ -1,46 +1,110 @@
-import { useParams } from "react-router-dom";
+// src/pages/ProductDetail.jsx
+import { useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { FiShoppingBag } from "react-icons/fi";
 import products from "../data/products";
 import ImageModal from "../components/ImageModal";
+import ProductPreview from "../components/ProductPreview";
 
 export default function ProductDetail() {
-  const { id } = useParams();
-  const product = products.find((p) => p.id === Number(id));
-  const [open, setOpen] = useState(false);
+  const { productId } = useParams();
+  const navigate = useNavigate();
+  const [showModal, setShowModal] = useState(false);
 
-  if (!product) return <div className="p-4">Produk tidak ditemukan</div>;
+  const currentIndex = products.findIndex((p) => p.id === Number(productId));
+  const product = products[currentIndex];
+
+  const prevProduct =
+    products[(currentIndex - 1 + products.length) % products.length];
+  const nextProduct = products[(currentIndex + 1) % products.length];
+
+  if (!product) {
+    return (
+      <section className="mx-auto max-w-4xl px-4 py-16 text-center">
+        <h1 className="text-2xl font-bold text-primary">
+          Produk tidak ditemukan
+        </h1>
+        <button
+          onClick={() => navigate("/shop")}
+          className="mt-4 inline-block rounded-full bg-primary px-6 py-2 text-white"
+        >
+          <FiShoppingBag className="inline mr-2" />
+          Back to Shop
+        </button>
+      </section>
+    );
+  }
 
   return (
-    <section className="mx-auto max-w-4xl px-4 py-12">
-      {/* klik gambar untuk zoom */}
-      <img
-        src={product.image}
-        alt={product.name}
-        className="w-full max-h-[450px] cursor-zoom-in rounded-lg object-cover shadow"
-        onClick={() => setOpen(true)}
-      />
+    <section className="mx-auto max-w-6xl px-4 py-12">
+      <div className="flex flex-col md:flex-row gap-8">
+        {/* Gambar */}
+        <div
+          className="flex-1 cursor-pointer"
+          onClick={() => setShowModal(true)}
+        >
+          <img
+            src={product.image}
+            alt={product.name}
+            className="rounded-xl shadow-lg w-full object-cover"
+          />
+        </div>
 
-      <h1 className="mt-6 text-3xl font-bold text-primary">{product.name}</h1>
-      <p className="mt-2 text-gray-600">{product.desc}</p>
-      <p className="mt-4 text-xl font-semibold text-primary-light">
-        {product.price}
-      </p>
+        {/* Detail */}
+        <div className="flex-1">
+          <h1 className="text-3xl font-bold text-primary mb-2">
+            {product.name}
+          </h1>
+          <p className="text-gray-700 mb-4">{product.desc}</p>
+          <p className="text-xl font-semibold text-primary-light mb-4">
+            {product.price}
+          </p>
 
-      <a
-        href={`https://wa.me/6289696135242?text=Halo%20Ukuiki%2C%20saya%20mau%20pesan%20${encodeURIComponent(
-          product.name
-        )}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mt-6 inline-block rounded-full bg-primary px-6 py-3 text-white hover:bg-primary-dark"
-      >
-        Beli via WhatsApp
-      </a>
+          <a
+            href={`https://wa.me/6289696135242?text=Halo%20Ukuiki,%20saya%20tertarik%20dengan%20${encodeURIComponent(
+              product.name
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-primary text-white px-6 py-2 rounded-full hover:bg-primary-dark transition"
+          >
+            Beli via WhatsApp
+          </a>
+        </div>
+      </div>
 
-      {/* Zoom modal */}
+      {/* Tombol navigasi */}
+      <div className="flex flex-col sm:flex-row justify-between mt-10 gap-4 text-center">
+        <button
+          onClick={() => navigate(`/shop/${prevProduct.id}`)}
+          className="text-sm text-primary hover:underline"
+        >
+          ← {prevProduct.name}
+        </button>
+        <button
+          onClick={() => navigate("/shop")}
+          className="text-sm text-primary hover:underline flex items-center gap-1 justify-center"
+        >
+          <FiShoppingBag /> Kembali ke Shop
+        </button>
+        <button
+          onClick={() => navigate(`/shop/${nextProduct.id}`)}
+          className="text-sm text-primary hover:underline"
+        >
+          {nextProduct.name} →
+        </button>
+      </div>
+
+      {/* Produk lainnya */}
+      <div className="mt-16">
+        <h2 className="text-2xl font-bold text-primary mb-4">Produk Lainnya</h2>
+        <ProductPreview excludeId={product.id} />
+      </div>
+
+      {/* Modal Gambar */}
       <ImageModal
-        isOpen={open}
-        onClose={() => setOpen(false)}
+        isOpen={showModal}
+        onClose={() => setShowModal(false)}
         imageSrc={product.image}
         alt={product.name}
       />

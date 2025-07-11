@@ -19,7 +19,8 @@ export default function App() {
         <Route path="/events" element={<Events />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/product/:id" element={<ProductDetail />} />
+        <Route path="/shop/:productId" element={<ProductDetail />} />
+
       </Route>
     </Routes>
   );
