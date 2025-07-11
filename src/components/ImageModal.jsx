@@ -1,59 +1,55 @@
-import { Dialog, Transition } from "@headlessui/react";
-import { Fragment } from "react";
+import { useEffect, useCallback } from "react";
 import PropTypes from "prop-types";
+import { FiX } from "react-icons/fi";
 
 export default function ImageModal({ isOpen, onClose, imageSrc, alt }) {
-  return (
-    <Transition show={isOpen} as={Fragment}>
-      <Dialog onClose={onClose} className="relative z-50">
-        {/* Overlay */}
-        <Transition.Child
-          as={Fragment}
-          enter="ease-out duration-200"
-          enterFrom="opacity-0"
-          enterTo="opacity-100"
-          leave="ease-in duration-100"
-          leaveFrom="opacity-100"
-          leaveTo="opacity-0"
-        >
-          <div className="fixed inset-0 bg-black/60" aria-hidden="true" />
-        </Transition.Child>
+  // Fungsi untuk menangani Escape
+  const handleKeyDown = useCallback(
+    (e) => {
+      if (e.key === "Escape") {
+        onClose();
+      }
+    },
+    [onClose]
+  );
 
-        {/* Modal content */}
-        <div className="fixed inset-0 flex items-center justify-center p-4">
-          <Transition.Child
-            as={Fragment}
-            enter="ease-out duration-200"
-            enterFrom="opacity-0 scale-90"
-            enterTo="opacity-100 scale-100"
-            leave="ease-in duration-100"
-            leaveFrom="opacity-100 scale-100"
-            leaveTo="opacity-0 scale-90"
+  // Tambah event listener ketika modal terbuka
+  useEffect(() => {
+    if (isOpen) {
+      document.addEventListener("keydown", handleKeyDown);
+    }
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen, handleKeyDown]);
+
+  if (!isOpen) return null;
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm px-4">
+      <div className="bg-white rounded-xl overflow-hidden shadow-lg max-w-lg w-full">
+        <img
+          src={imageSrc}
+          alt={alt}
+          className="w-full object-contain max-h-[80vh]"
+        />
+        <div className="flex justify-center p-4">
+          <button
+            onClick={onClose}
+            className="flex items-center gap-2 text-sm text-primary hover:underline"
           >
-            <Dialog.Panel className="relative max-w-3xl w-full overflow-hidden rounded-2xl bg-white p-4 shadow-xl">
-              <img
-                src={imageSrc}
-                alt={alt}
-                className="w-full h-auto object-contain rounded"
-              />
-              <button
-                onClick={onClose}
-                className="absolute top-3 right-3 text-xl text-gray-700 hover:text-black"
-              >
-                &times;
-              </button>
-            </Dialog.Panel>
-          </Transition.Child>
+            <FiX className="text-xl" />
+            Tutup Gambar
+          </button>
         </div>
-      </Dialog>
-    </Transition>
+      </div>
+    </div>
   );
 }
 
-// ✅ Tambahkan prop types
 ImageModal.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
   imageSrc: PropTypes.string.isRequired,
-  alt: PropTypes.string,
+  alt: PropTypes.string.isRequired,
 };

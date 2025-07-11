@@ -1,4 +1,3 @@
-// src/pages/ProductDetail.jsx
 import { useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { FiShoppingBag } from "react-icons/fi";
@@ -13,7 +12,6 @@ export default function ProductDetail() {
 
   const currentIndex = products.findIndex((p) => p.id === Number(productId));
   const product = products[currentIndex];
-
   const prevProduct =
     products[(currentIndex - 1 + products.length) % products.length];
   const nextProduct = products[(currentIndex + 1) % products.length];
@@ -38,19 +36,19 @@ export default function ProductDetail() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-12">
       <div className="flex flex-col md:flex-row gap-8">
-        {/* Gambar */}
+        {/* Gambar dengan efek hover */}
         <div
-          className="flex-1 cursor-pointer"
+          className="flex-1 relative group cursor-pointer"
           onClick={() => setShowModal(true)}
         >
           <img
             src={product.image}
             alt={product.name}
-            className="rounded-xl shadow-lg w-full object-cover"
+            className="rounded-xl shadow-lg w-full object-cover transition duration-300 ease-in-out group-hover:scale-105"
           />
         </div>
 
-        {/* Detail */}
+        {/* Detail Produk */}
         <div className="flex-1">
           <h1 className="text-3xl font-bold text-primary mb-2">
             {product.name}
@@ -74,7 +72,7 @@ export default function ProductDetail() {
       </div>
 
       {/* Tombol navigasi */}
-      <div className="flex flex-col sm:flex-row justify-between mt-10 gap-4 text-center">
+      <div className="flex flex-col sm:flex-row justify-between mt-10 gap-4">
         <button
           onClick={() => navigate(`/shop/${prevProduct.id}`)}
           className="text-sm text-primary hover:underline"
@@ -83,7 +81,7 @@ export default function ProductDetail() {
         </button>
         <button
           onClick={() => navigate("/shop")}
-          className="text-sm text-primary hover:underline flex items-center gap-1 justify-center"
+          className="text-sm text-primary hover:underline flex items-center gap-1"
         >
           <FiShoppingBag /> Kembali ke Shop
         </button>
