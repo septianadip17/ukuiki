@@ -1,7 +1,6 @@
-// src/components/ProductPreview.jsx
 import { useMemo, useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import products from "../../data/products.js"; // Pastikan path ini sesuai dengan struktur proyek Anda
+import products from "../../data/products.js";
 import ProductCard from "./ProductCard";
 import ProductCardSkeleton from "./ProductCardSkeleton";
 
@@ -25,7 +24,7 @@ export default function ProductPreview({ excludeId }) {
   }, [excludeId]);
 
   useEffect(() => {
-    const timeout = setTimeout(() => setLoading(false), 1000); // Simulasi delay 1s
+    const timeout = setTimeout(() => setLoading(false), 10000);
     return () => clearTimeout(timeout);
   }, []);
 
