@@ -1,9 +1,10 @@
+// src/pages/ProductDetail.jsx
 import { useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { FiShoppingBag } from "react-icons/fi";
 import products from "../data/products";
 import ImageModal from "../components/shop/ImageModal";
-import ProductPreview from "../components/Shop/ProductPreview";
+import ProductPreview from "../components/shop/ProductPreview";
 
 export default function ProductDetail() {
   const { productId } = useParams();
@@ -24,10 +25,10 @@ export default function ProductDetail() {
         </h1>
         <button
           onClick={() => navigate("/shop")}
-          className="mt-4 inline-block rounded-full bg-primary px-6 py-2 text-white"
+          className="mt-4 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-2 text-white hover:bg-primary-dark"
         >
-          <FiShoppingBag className="inline mr-2" />
-          Back to Shop
+          <FiShoppingBag />
+          Kembali ke Shop
         </button>
       </section>
     );
@@ -35,26 +36,27 @@ export default function ProductDetail() {
 
   return (
     <section className="mx-auto max-w-6xl px-4 py-12">
-      <div className="flex flex-col md:flex-row gap-8">
-        {/* Gambar dengan efek hover */}
+      {/* ---- Product Info ---- */}
+      <div className="flex flex-col gap-8 md:flex-row">
+        {/* Product Image */}
         <div
-          className="flex-1 relative group cursor-pointer"
+          className="flex-1 relative group cursor-zoom-in"
           onClick={() => setShowModal(true)}
         >
           <img
             src={product.image}
             alt={product.name}
-            className="rounded-xl shadow-lg w-full object-cover transition duration-300 ease-in-out group-hover:scale-105"
+            className="w-full rounded-xl object-cover shadow-lg transition duration-300 group-hover:scale-105"
           />
         </div>
 
-        {/* Detail Produk */}
+        {/* Product Detail */}
         <div className="flex-1">
-          <h1 className="text-3xl font-bold text-primary mb-2">
+          <h1 className="mb-2 text-3xl font-bold text-primary">
             {product.name}
           </h1>
-          <p className="text-gray-700 mb-4">{product.desc}</p>
-          <p className="text-xl font-semibold text-primary-light mb-4">
+          <p className="mb-4 text-gray-700">{product.desc}</p>
+          <p className="mb-6 text-xl font-semibold text-primary-light">
             {product.price}
           </p>
 
@@ -64,42 +66,50 @@ export default function ProductDetail() {
             )}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-primary text-white px-6 py-2 rounded-full hover:bg-primary-dark transition"
+            className="inline-block rounded-full bg-primary px-6 py-2 text-white transition hover:bg-primary-dark"
           >
             Beli via WhatsApp
           </a>
         </div>
       </div>
 
-      {/* Tombol navigasi */}
-      <div className="flex flex-col sm:flex-row justify-between mt-10 gap-4">
+      {/* ---- Navigation Buttons (Styled) ---- */}
+      <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:justify-between">
+        {/* Prev Product */}
         <button
           onClick={() => navigate(`/shop/${prevProduct.id}`)}
-          className="text-sm text-primary hover:underline"
+          className="flex items-center justify-center gap-2 rounded-full border border-primary px-5 py-2 text-primary shadow-sm transition hover:bg-primary-light/10"
         >
-          ← {prevProduct.name}
+          <span className="text-lg">←</span>
+          <span className="text-sm font-medium">{prevProduct.name}</span>
         </button>
+
+        {/* Back to Shop */}
         <button
           onClick={() => navigate("/shop")}
-          className="text-sm text-primary hover:underline flex items-center gap-1"
+          className="flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-2 text-sm font-medium text-white shadow-md transition hover:bg-primary-dark"
         >
-          <FiShoppingBag /> Kembali ke Shop
+          <FiShoppingBag className="text-base" />
+          Back to Shop
         </button>
+
+        {/* Next Product */}
         <button
           onClick={() => navigate(`/shop/${nextProduct.id}`)}
-          className="text-sm text-primary hover:underline"
+          className="flex items-center justify-center gap-2 rounded-full border border-primary px-5 py-2 text-primary shadow-sm transition hover:bg-primary-light/10"
         >
-          {nextProduct.name} →
+          <span className="text-sm font-medium">{nextProduct.name}</span>
+          <span className="text-lg">→</span>
         </button>
       </div>
 
-      {/* Produk lainnya */}
+      {/* ---- Product Recommendations ---- */}
       <div className="mt-16">
-        <h2 className="text-2xl font-bold text-primary mb-4">Produk Lainnya</h2>
+        <h2 className="mb-4 text-2xl font-bold text-primary">Produk Lainnya</h2>
         <ProductPreview excludeId={product.id} />
       </div>
 
-      {/* Modal Gambar */}
+      {/* ---- Modal for Image ---- */}
       <ImageModal
         isOpen={showModal}
         onClose={() => setShowModal(false)}
