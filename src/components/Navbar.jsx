@@ -20,7 +20,6 @@ export default function Navbar() {
   const { pathname, hash } = useLocation();
   const isLanding = pathname === "/";
 
-  // Tutup mobile menu saat route berubah
   useEffect(() => setOpen(false), [pathname, hash]);
 
   // Komponen menu
