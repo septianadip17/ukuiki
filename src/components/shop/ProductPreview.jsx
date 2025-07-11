@@ -1,12 +1,10 @@
 // src/components/ProductPreview.jsx
-import { useMemo } from "react";
+import { useMemo, useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import products from "../../data/products";
+import products from "../../data/products.js"; // Pastikan path ini sesuai dengan struktur proyek Anda
 import ProductCard from "./ProductCard";
+import ProductCardSkeleton from "./ProductCardSkeleton";
 
-/**
- * Shuffle array secara acak
- */
 function shuffleArray(array) {
   const result = [...array];
   for (let i = result.length - 1; i > 0; i--) {
@@ -17,6 +15,8 @@ function shuffleArray(array) {
 }
 
 export default function ProductPreview({ excludeId }) {
+  const [loading, setLoading] = useState(true);
+
   const randomProducts = useMemo(() => {
     const filtered = excludeId
       ? products.filter((p) => p.id !== Number(excludeId))
@@ -24,11 +24,20 @@ export default function ProductPreview({ excludeId }) {
     return shuffleArray(filtered).slice(0, 3);
   }, [excludeId]);
 
+  useEffect(() => {
+    const timeout = setTimeout(() => setLoading(false), 1000); // Simulasi delay 1s
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
     <div className="flex snap-x scroll-smooth gap-6 overflow-x-auto px-1 md:grid md:grid-cols-3 md:overflow-visible md:snap-none">
-      {randomProducts.map((product) => (
-        <ProductCard key={product.id} product={product} />
-      ))}
+      {loading
+        ? Array.from({ length: 3 }).map((_, idx) => (
+            <ProductCardSkeleton key={idx} />
+          ))
+        : randomProducts.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
     </div>
   );
 }
