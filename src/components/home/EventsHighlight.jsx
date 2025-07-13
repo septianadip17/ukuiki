@@ -8,9 +8,9 @@ import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 
 const eventImages = [
-  { src: "/community/museum-bi.jpg", alt: "Museum BI" },
-  { src: "/community/concert-at-gripa.jpeg", alt: "Concert at Gripa" },
-  { src: "/community/ioef-mbloc.jpg", alt: "IOEF MBloc" },
+  { src: "/banner/summer-class.webp", alt: "Summer Class" },
+  { src: "/banner/summerclass-polarasa.jpeg", alt: "Summer Class Polarasa" },
+
 ];
 
 export default function EventsHighlight() {
