@@ -1,19 +1,46 @@
+import { useEffect, useCallback } from "react";
 import PropTypes from "prop-types";
+import { FiX } from "react-icons/fi";
 
 export default function ImageModal({ isOpen, onClose, imageSrc, alt }) {
+  const handleKeyDown = useCallback(
+    (e) => {
+      if (e.key === "Escape") {
+        onClose();
+      }
+    },
+    [onClose]
+  );
+
+  useEffect(() => {
+    if (isOpen) {
+      document.addEventListener("keydown", handleKeyDown);
+    }
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen, handleKeyDown]);
+
   if (!isOpen) return null;
 
   return (
-    <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm"
-      onClick={onClose}
-    >
-      <img
-        src={imageSrc}
-        alt={alt}
-        className="max-h-[90vh] max-w-[90vw] rounded-xl shadow-lg"
-        onClick={(e) => e.stopPropagation()} // agar modal tidak tertutup saat klik gambar
-      />
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm px-4">
+      <div className="bg-white rounded-xl overflow-hidden shadow-lg max-w-lg w-full">
+        <img
+          src={imageSrc}
+          alt={alt}
+          className="w-full object-contain max-h-[80vh]"
+        />
+        <div className="flex justify-center p-4">
+          <button
+            onClick={onClose}
+            className="flex items-center justify-center gap-2 rounded-full border border-primary px-5 py-2 text-primary shadow-sm transition hover:bg-primary-dark hover:text-white"
+          >
+            <FiX className="text-xl" />
+            Tutup Gambar
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
@@ -21,6 +48,6 @@ export default function ImageModal({ isOpen, onClose, imageSrc, alt }) {
 ImageModal.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
-  imageSrc: PropTypes.string,
-  alt: PropTypes.string,
+  imageSrc: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
 };
