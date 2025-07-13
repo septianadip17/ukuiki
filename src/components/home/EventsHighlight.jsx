@@ -16,41 +16,44 @@ const eventImages = [
 export default function EventsHighlight() {
   return (
     <section className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary/10 to-primary/5 shadow-lg">
-      <div className="grid md:grid-cols-2 items-center gap-6 px-6 py-10">
-        {/* ---- AUTO IMAGE SLIDER ---- */}
+      <div className="grid items-center gap-8 px-6 py-12 md:grid-cols-2">
+        {/* ---- IMAGE SLIDER ---- */}
         <div className="order-2 md:order-1">
           <Swiper
             modules={[Autoplay, Pagination, EffectFade]}
             effect="fade"
-            autoplay={{ delay: 3500, disableOnInteraction: false }}
+            autoplay={{ delay: 2500, disableOnInteraction: false }}
             pagination={{ clickable: true }}
             loop={true}
             className="rounded-xl shadow-md h-64 md:h-80"
           >
             {eventImages.map((img, index) => (
               <SwiperSlide key={index}>
-                <img
-                  src={img.src}
-                  alt={img.alt}
-                  className="h-full w-full object-cover rounded-xl"
-                />
+                <div className="relative h-full w-full overflow-hidden rounded-xl">
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    className="h-full w-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black/10 rounded-xl" />
+                </div>
               </SwiperSlide>
             ))}
           </Swiper>
         </div>
 
         {/* ---- TEXT SECTION ---- */}
-        <div className="order-1 md:order-2">
-          <h3 className="text-2xl font-extrabold text-primary mb-2">
+        <div className="order-1 md:order-2 text-center md:text-left">
+          <h3 className="text-2xl md:text-3xl font-extrabold text-primary mb-3">
             Event Terdekat 📅
           </h3>
-          <p className="text-gray-700 mb-4 leading-relaxed">
+          <p className="text-gray-700 mb-5 leading-relaxed max-w-md mx-auto md:mx-0">
             Jangan sampai ketinggalan konser, workshop, dan keseruan lain yang
-            bisa kamu ikuti bersama UKUiki!
+            bisa kamu ikuti bersama <strong>UKUiki</strong>!
           </p>
           <Link
             to="/events"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-full font-medium hover:bg-primary-dark transition"
+            className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-white shadow hover:bg-primary-dark transition duration-300"
           >
             <FiCalendar className="text-lg" />
             Lihat Jadwal
