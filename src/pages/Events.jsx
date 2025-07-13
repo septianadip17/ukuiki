@@ -1,44 +1,82 @@
+import { useState } from "react";
 import events from "../data/events.js";
+import ImageModal from "../components/common/ImageModal.jsx";
 
 export default function Events() {
+  const today = new Date();
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalImage, setModalImage] = useState("");
+  const [modalAlt, setModalAlt] = useState("");
+
+  const handleImageClick = (src, alt) => {
+    setModalImage(src);
+    setModalAlt(alt);
+    setModalOpen(true);
+  };
+
+  const sortedEvents = [...events].sort((a, b) => {
+    const dateA = new Date(a.date);
+    const dateB = new Date(b.date);
+    const isPastA = dateA < today;
+    const isPastB = dateB < today;
+    if (isPastA && !isPastB) return 1;
+    if (!isPastA && isPastB) return -1;
+    return dateB - dateA;
+  });
+
   return (
-    <section className="mx-auto max-w-5xl px-4 py-8">
-      <h1 className="mb-6 text-3xl font-bold text-primary">Events Schedule</h1>
-      <div className="space-y-6">
-        {events.map((w) => (
+    <section className="mx-auto max-w-5xl px-4 py-12">
+      <h1 className="mb-8 text-3xl font-extrabold text-primary drop-shadow">
+        Jadwal Event Ukuiki
+      </h1>
+
+      <div className="grid gap-8 md:grid-cols-2">
+        {sortedEvents.map((w) => (
           <div
             key={w.id}
-            className="rounded-2xl bg-white p-4 shadow-md transition hover:shadow-lg"
+            className="rounded-2xl bg-white shadow-md transition hover:shadow-lg overflow-hidden flex flex-col"
           >
-            <h2 className="text-xl font-bold text-primary">{w.title}</h2>
             {w.photo && (
               <img
                 src={w.photo}
                 alt={w.title}
-                className="my-4 h-48 w-full rounded-lg object-cover"
+                onClick={() => handleImageClick(w.photo, w.title)}
+                className="w-full h-56 object-cover md:h-64 cursor-pointer hover:brightness-95 transition aspect-video duration-300 group-hover:scale-105"
               />
             )}
-            <p className="mb-2 text-gray-600">{w.desc}</p>
-            <p className="text-sm text-gray-500">
-              {new Date(w.date).toLocaleDateString("en-EN", {
-                weekday: "long",
-                day: "numeric",
-                month: "long",
-                year: "numeric",
-              })}{" "}
-              · {w.time}
-            </p>
-            <p className="mb-2 text-gray-700">{w.location}</p>
-            <a
-              href={w.link}
-              target="_blank"
-              className="inline-block rounded-full bg-primary px-4 py-2 text-white hover:bg-primary-dark"
-            >
-              Sign Up
-            </a>
+            <div className="flex flex-col p-5 flex-1">
+              <h2 className="text-xl font-bold text-primary mb-2">{w.title}</h2>
+              <p className="text-gray-600 mb-2 line-clamp-3">{w.desc}</p>
+              <p className="text-sm text-gray-500 mb-1">
+                {new Date(w.date).toLocaleDateString("id-ID", {
+                  weekday: "long",
+                  day: "numeric",
+                  month: "long",
+                  year: "numeric",
+                })}{" "}
+                · {w.time}
+              </p>
+              <p className="text-sm text-gray-700 mb-3">{w.location}</p>
+              <a
+                href={w.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-auto inline-block w-max rounded-full bg-primary px-5 py-2 text-sm text-white hover:bg-primary-dark"
+              >
+                Daftar Sekarang
+              </a>
+            </div>
           </div>
         ))}
       </div>
+
+      {/* Modal Gambar */}
+      <ImageModal
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+        imageSrc={modalImage}
+        alt={modalAlt}
+      />
     </section>
   );
 }
