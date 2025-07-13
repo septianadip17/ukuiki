@@ -22,13 +22,13 @@ const Hero = () => {
             <div className="flex flex-wrap gap-4">
               <Link
                 to="/shop"
-                className="rounded-full bg-primary-dark px-6 py-3 text-white font-semibold shadow hover:bg-primary-dark/10 transition duration-300 "
+                className="rounded-full bg-primary-dark px-6 py-3 text-white font-semibold shadow hover:bg-primary-dark/70 transition duration-300 "
               >
                 Shop Now
               </Link>
               <Link
                 to="/events"
-                className="rounded-full bg-primary-light px-6 py-3 text-white hover:bg-primary-light/10 transition duration-300 font-semibold shadow"
+                className="rounded-full bg-primary-light px-6 py-3 text-white hover:bg-primary-light/80 transition duration-300 font-semibold shadow"
               >
                 Events
               </Link>
