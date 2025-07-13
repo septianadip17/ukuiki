@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Roboto', 'ui-sans-serif', 'system-ui'],
+        sans: ["Roboto", "ui-sans-serif", "system-ui"],
       },
       colors: {
         primary: {
@@ -12,6 +12,15 @@ export default {
           light: "#9686BB",
           dark: "#57467B",
         },
+      },
+      keyframes: {
+        scroll: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+      },
+      animation: {
+        scroll: "scroll 20s linear infinite",
       },
     },
   },

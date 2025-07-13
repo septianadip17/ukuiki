@@ -26,7 +26,7 @@ export default function Landing() {
       </Section>
 
       {/* Events */}
-      <Section id="events">
+      <Section id="events" title="Event Terdekat">
         <EventsHighlight />
       </Section>
 
