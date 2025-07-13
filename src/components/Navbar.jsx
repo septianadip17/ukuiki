@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useLocation, NavLink } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
 import { FiMenu, FiX } from "react-icons/fi";
-import PropTypes from "prop-types";
 import ukuikiLogo from "../assets/ukuikiLogo.png";
 
 /* ---------- Data menu utama ---------- */
@@ -32,24 +31,15 @@ export default function Navbar() {
         to={dest}
         smooth={dest.includes("#") ? true : undefined}
         aria-current={isActive ? "page" : undefined}
-        className={`block rounded-xl px-4 py-2 transition hover:bg-primary-light/20 ${
+        className={`block rounded-xl px-4 py-2 transition hover:bg-primary-light/20  ${
           isActive
             ? "text-primary font-bold bg-primary-light/10"
-            : "text-gray-700"
+            : "text-gray-700 font-extrabold"
         } ${mobile ? "" : "text-sm"}`}
       >
         {item.label}
       </Component>
     );
-  };
-
-  MenuItem.propTypes = {
-    item: PropTypes.shape({
-      label: PropTypes.string.isRequired,
-      hash: PropTypes.string,
-      page: PropTypes.string.isRequired,
-    }).isRequired,
-    mobile: PropTypes.bool,
   };
 
   return (
