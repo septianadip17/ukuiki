@@ -41,14 +41,14 @@ export default function Events() {
                 src={w.photo}
                 alt={w.title}
                 onClick={() => handleImageClick(w.photo, w.title)}
-                className="w-full h-56 object-cover md:h-64 cursor-pointer hover:brightness-95 transition aspect-video duration-300 group-hover:scale-105"
+                className="w-full h-56 md:h-64 object-cover cursor-pointer transition duration-300 ease-in-out transform hover:scale-105 hover:-translate-y-1 rounded-t-2xl hover:shadow-lg"
               />
             )}
             <div className="flex flex-col p-5 flex-1">
               <h2 className="text-xl font-bold text-primary mb-2">{w.title}</h2>
               <p className="text-gray-600 mb-2 line-clamp-3">{w.desc}</p>
               <p className="text-sm text-gray-500 mb-1">
-                {new Date(w.date).toLocaleDateString("id-ID", {
+                {new Date(w.date).toLocaleDateString("en-EN", {
                   weekday: "long",
                   day: "numeric",
                   month: "long",
