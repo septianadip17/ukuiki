@@ -1,6 +1,7 @@
 import { useState } from "react";
 import events from "../data/events.js";
 import ImageModal from "../components/common/ImageModal.jsx";
+import { FiArrowRightCircle } from "react-icons/fi";
 
 export default function Events() {
   const today = new Date();
@@ -27,7 +28,7 @@ export default function Events() {
   return (
     <section className="mx-auto max-w-5xl px-4 py-12">
       <h1 className="mb-8 text-3xl font-extrabold text-primary drop-shadow">
-        Jadwal Event Ukuiki
+        Upcoming Events!
       </h1>
 
       <div className="grid gap-8 md:grid-cols-2">
@@ -61,9 +62,10 @@ export default function Events() {
                 href={w.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-auto inline-block w-max rounded-full bg-primary px-5 py-2 text-sm text-white hover:bg-primary-dark"
+                className="mt-auto inline-block w-max rounded-full bg-primary px-5 py-2 text-sm text-white hover:bg-primary-dark transition duration-300 group"
               >
-                Daftar Sekarang
+                <FiArrowRightCircle className="inline-block mr-2 text-xl group-hover:animate-bounce" />
+                Sign Up
               </a>
             </div>
           </div>
