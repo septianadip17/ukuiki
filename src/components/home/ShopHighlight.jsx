@@ -80,7 +80,6 @@ export default function ShopHighlight() {
           ))}
         </Swiper>
 
-        {/* Custom Navigation Buttons with ref */}
         <button
           ref={prevRef}
           className="swiper-button-prev !text-primary !font-bold !text-2xl !w-10 !h-10 !bg-white !rounded-full !shadow-md hover:!bg-primary hover:!text-white transition-all duration-300 absolute top-1/2 -left-2 -translate-y-1/2 z-10"

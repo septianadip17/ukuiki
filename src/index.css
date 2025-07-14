@@ -8,21 +8,21 @@ body {
 
 .swiper-button-next,
 .swiper-button-prev {
-  color: #745ea5; /* Warna ungu primary kamu */
+  color: #745ea5; 
 }
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  color: #581c87; /* Warna dark */
+  color: #581c87;
 }
 
 .swiper-pagination-bullet {
-  background-color: #d1c4e9; /* Ungu muda */
+  background-color: #d1c4e9; 
   opacity: 1;
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #745ea5; /* Warna primary */
+  background-color: #745ea5; 
 }
 
 section {
