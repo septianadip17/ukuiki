@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { Link } from "react-router-dom";
+import { FiShoppingCart, FiShoppingBag } from "react-icons/fi";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -9,7 +10,6 @@ import "swiper/css/pagination";
 
 import products from "../../data/products";
 
-// Mini Product Card Component
 function ProductCardMini({ product }) {
   return (
     <div className="rounded-2xl bg-white shadow-md hover:shadow-lg transition-all overflow-hidden">
@@ -32,6 +32,7 @@ function ProductCardMini({ product }) {
           rel="noopener noreferrer"
           className="mt-4 w-max rounded-full bg-primary px-5 py-2 text-sm text-white hover:bg-primary-dark transition"
         >
+          <FiShoppingCart className="inline-block mr-2" />
           Buy Now
         </a>
       </div>
@@ -45,15 +46,17 @@ export default function ShopHighlight() {
   const nextRef = useRef(null);
 
   return (
-    <section className="relative py-8">
-      <div className="mb-6 text-center">
-        <p className="text-gray-600 mt-2 max-w-xl mx-auto">
-          Check out our top picks just for you. Discover quality products with
-          exciting deals!
+    <section id="shop" className="relative py-3 px-4 max-w-6xl mx-auto">
+      {/* Section Header */}
+      <div className="text-center mb-5">
+        <p className="text-gray-600 max-w-xl mx-auto leading-relaxed">
+          Discover our handpicked selection of best-selling products—perfect for
+          your lifestyle and everyday needs.
         </p>
       </div>
 
-      <div className="relative px-4">
+      {/* Slider */}
+      <div className="relative">
         <Swiper
           modules={[Navigation, Pagination]}
           spaceBetween={24}
@@ -80,18 +83,26 @@ export default function ShopHighlight() {
           ))}
         </Swiper>
 
+        {/* Navigation Buttons */}
         <button
           ref={prevRef}
-          className="swiper-button-prev !text-primary !font-bold !text-2xl !w-10 !h-10 !bg-white !rounded-full !shadow-md hover:!bg-primary hover:!text-white transition-all duration-300 absolute top-1/2 -left-2 -translate-y-1/2 z-10"
-        >
-          
-        </button>
+          className="swiper-button-prev !text-primary !font-bold !text-xl !w-10 !h-10 !bg-white !rounded-full !shadow-md hover:!bg-primary hover:!text-white transition-all duration-300 absolute top-1/2 -left-3 -translate-y-1/2 z-10 flex items-center justify-center"
+        ></button>
         <button
           ref={nextRef}
-          className="swiper-button-next !text-primary !font-bold !text-2xl !w-10 !h-10 !bg-white !rounded-full !shadow-md hover:!bg-primary hover:!text-white transition-all duration-300 absolute top-1/2 -right-2 -translate-y-1/2 z-10"
+          className="swiper-button-next !text-primary !font-bold !text-xl !w-10 !h-10 !bg-white !rounded-full !shadow-md hover:!bg-primary hover:!text-white transition-all duration-300 absolute top-1/2 -right-3 -translate-y-1/2 z-10 flex items-center justify-center"
+        ></button>
+      </div>
+
+      {/* CTA Button to Full Shop */}
+      <div className="p-4 border-b border-gray-200 text-center">
+        <Link
+          to="/shop"
+          className="group inline-flex justify-center items-center gap-3 rounded-full bg-primary mb-4 px-6 py-3 text-white font-medium shadow-md hover:bg-primary-dark transition duration-300"
         >
-          
-        </button>
+          <FiShoppingBag className="text-xl group-hover:animate-bounce" />
+          <span>Browse All Products</span>
+        </Link>
       </div>
     </section>
   );

@@ -24,7 +24,3 @@ body {
 .swiper-pagination-bullet-active {
   background-color: #745ea5; 
 }
-
-section {
-  scroll-margin-top: 56px;
-}

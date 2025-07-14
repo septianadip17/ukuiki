@@ -6,37 +6,56 @@ import AboutHighlight from "../components/home/AboutHighlight";
 import ContactHighlight from "../components/home/ContactHighlight";
 import ShopHighlight from "../components/home/ShopHighlight";
 
+import {
+  FiShoppingBag,
+  FiUsers,
+  FiCalendar,
+  FiInfo,
+  FiMail,
+} from "react-icons/fi";
+
 export default function Landing() {
   return (
     <div id="top">
       <Hero />
 
-      {/* Shop */}
       <Section
         id="shop"
-        title="Ukulele Ready Stock"
-        cta={{ label: "Lihat Semua Produk", to: "/shop" }}
+        title="Let's Check Our Shop"
+        cta={{ to: "/shop", label: "Explore Shop", icon: <FiShoppingBag /> }}
       >
         <ShopHighlight />
       </Section>
 
-      {/* Community Highlights */}
-      <Section id="community" title="Community Highlights">
+      <Section
+        id="community"
+        title="Community Highlights"
+        cta={{ to: "/community", label: "See More", icon: <FiUsers /> }}
+      >
         <CommunityHighlight />
       </Section>
 
-      {/* Events */}
-      <Section id="events" title="Event Terdekat">
+      <Section
+        id="events"
+        title="Upcoming Events"
+        cta={{ to: "/events", label: "View Schedule", icon: <FiCalendar /> }}
+      >
         <EventsHighlight />
       </Section>
 
-      {/* About */}
-      <Section id="about">
+      <Section
+        id="about"
+        title="About UKUiki"
+        cta={{ to: "/about", label: "Learn More", icon: <FiInfo /> }}
+      >
         <AboutHighlight />
       </Section>
 
-      {/* Contact */}
-      <Section id="contact">
+      <Section
+        id="contact"
+        title="Contact Us"
+        cta={{ to: "/contact", label: "Get in Touch", icon: <FiMail /> }}
+      >
         <ContactHighlight />
       </Section>
     </div>

@@ -21,6 +21,7 @@ export default {
       },
       animation: {
         scroll: "scroll 20s linear infinite",
+        bounce: "bounce 1s infinite",
       },
     },
   },
