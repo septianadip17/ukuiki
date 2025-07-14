@@ -4,7 +4,6 @@ import { NavHashLink } from "react-router-hash-link";
 import { FiMenu, FiX } from "react-icons/fi";
 import ukuikiLogo from "../assets/ukuikiLogo.png";
 
-/* ---------- Data menu utama ---------- */
 const MENU = [
   { label: "Home", hash: "#top", page: "/" },
   { label: "Shop", hash: "#shop", page: "/shop" },
@@ -31,10 +30,8 @@ export default function Navbar() {
         to={dest}
         smooth={dest.includes("#") ? true : undefined}
         aria-current={isActive ? "page" : undefined}
-        className={`block rounded-xl px-4 py-2 transition hover:bg-primary-light/20  ${
-          isActive
-            ? "text-primary font-bold bg-primary-light/10"
-            : "text-gray-700 font-extrabold"
+        className={`block rounded-xl px-4 py-2 transition hover:bg-primary-light/20 font-bold ${
+          isActive ? "text-primary bg-primary-light/10" : "text-gray-700"
         } ${mobile ? "" : "text-sm"}`}
       >
         {item.label}
@@ -64,15 +61,17 @@ export default function Navbar() {
         </button>
       </div>
 
-      {open && (
-        <nav className="md:hidden">
-          <div className="mx-auto flex max-w-6xl flex-col gap-1 px-4 pb-4">
-            {MENU.map((item) => (
-              <MenuItem key={item.label} item={item} mobile />
-            ))}
-          </div>
-        </nav>
-      )}
+      <nav
+        className={`md:hidden transition-all duration-400 overflow-hidden ${
+          open ? "max-h-[500px] pb-4" : "max-h-0"
+        }`}
+      >
+        <div className="mx-auto flex max-w-6xl flex-col gap-1 px-4">
+          {MENU.map((item) => (
+            <MenuItem key={item.label} item={item} mobile />
+          ))}
+        </div>
+      </nav>
     </header>
   );
 }
