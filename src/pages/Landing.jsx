@@ -37,7 +37,7 @@ export default function Landing() {
 
       <Section
         id="events"
-        title="Upcoming Events"
+        title="Events"
         cta={{ to: "/events", label: "View Schedule", icon: <FiCalendar /> }}
       >
         <EventsHighlight />

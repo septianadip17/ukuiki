@@ -44,18 +44,18 @@ export default function EventsHighlight() {
         {/* ---- TEXT SECTION ---- */}
         <div className="w-full md:w-1/2 order-1 md:order-2 text-center md:text-left">
           <h3 className="text-2xl md:text-3xl font-extrabold text-primary mb-3">
-            Event Terdekat 📅
+            Upcoming Events 🎉
           </h3>
           <p className="text-gray-700 mb-5 leading-relaxed max-w-md mx-auto md:mx-0">
-            Jangan sampai ketinggalan konser, workshop, dan keseruan lain yang
-            bisa kamu ikuti bersama <strong>UKUiki</strong>!
+            Don't miss our upcoming events whether workshops, classes,
+            performances and concerts!
           </p>
           <Link
             to="/events"
             className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-white shadow hover:bg-primary-dark transition duration-300"
           >
             <FiCalendar className="text-lg" />
-            Lihat Jadwal
+            View Schedule
           </Link>
         </div>
       </div>
