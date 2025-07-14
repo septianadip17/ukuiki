@@ -10,30 +10,29 @@ import "swiper/css/effect-fade";
 const eventImages = [
   { src: "/banner/summer-class.webp", alt: "Summer Class" },
   { src: "/banner/summerclass-polarasa.jpeg", alt: "Summer Class Polarasa" },
-
 ];
 
 export default function EventsHighlight() {
   return (
     <section className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary/10 to-primary/5 shadow-lg">
-      <div className="grid items-center gap-8 px-6 py-12 md:grid-cols-2">
+      <div className="flex flex-col md:flex-row items-center gap-8 px-6 py-12">
         {/* ---- IMAGE SLIDER ---- */}
-        <div className="order-2 md:order-1">
+        <div className="w-full md:w-1/2 order-2 md:order-1">
           <Swiper
             modules={[Autoplay, Pagination, EffectFade]}
             effect="fade"
             autoplay={{ delay: 2500, disableOnInteraction: false }}
             pagination={{ clickable: true }}
             loop={true}
-            className="rounded-xl shadow-md h-64 md:h-80"
+            className="w-full h-[240px] sm:h-[280px] md:h-[320px] rounded-xl shadow-md"
           >
             {eventImages.map((img, index) => (
               <SwiperSlide key={index}>
-                <div className="relative h-full w-full overflow-hidden rounded-xl">
+                <div className="relative w-full h-full overflow-hidden rounded-xl">
                   <img
                     src={img.src}
                     alt={img.alt}
-                    className="h-full w-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-black/10 rounded-xl" />
                 </div>
@@ -43,7 +42,7 @@ export default function EventsHighlight() {
         </div>
 
         {/* ---- TEXT SECTION ---- */}
-        <div className="order-1 md:order-2 text-center md:text-left">
+        <div className="w-full md:w-1/2 order-1 md:order-2 text-center md:text-left">
           <h3 className="text-2xl md:text-3xl font-extrabold text-primary mb-3">
             Event Terdekat 📅
           </h3>
