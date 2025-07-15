@@ -29,7 +29,7 @@ export default function Landing() {
 
       <Section
         id="community"
-        title="Community Highlights"
+        title="Community"
         cta={{ to: "/community", label: "See More", icon: <FiUsers /> }}
       >
         <CommunityHighlight />
