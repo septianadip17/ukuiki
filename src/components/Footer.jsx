@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaInstagram, FaWhatsapp, FaEnvelope } from "react-icons/fa";
+import whiteLogo from "../assets/whiteLogo.png"; 
 
 const NAV_ITEMS = [
   { title: "Home", path: "/" },
@@ -33,11 +34,12 @@ const SOCIAL_LINKS = [
 
 export default function Footer() {
   return (
-    <footer className="bg-primary text-white pt-12 mt-16">
-      <div className="mx-auto max-w-6xl px-4 py-10 grid gap-10 sm:grid-cols-2 md:grid-cols-4">
+    <footer className="bg-primary text-white pt-3 mt-10">
+      <div className="mx-auto max-w-6xl px-4 py-10 grid grid-cols-2 gap-10 sm:grid-cols-4 md:grid-cols-4">
         <div>
           <Link to="/" className="flex items-center mb-4">
-            <h2 className="text-xl font-bold mb-2">UKUiki</h2>
+
+            <img src={whiteLogo} alt="" className="w-32" />
           </Link>
           <p className="text-sm text-white/80 leading-relaxed">
             When art meets music, paintings and melodies through ukulele.
