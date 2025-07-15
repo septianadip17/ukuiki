@@ -53,7 +53,7 @@ export default function Landing() {
 
       <Section
         id="contact"
-        title="Contact Us"
+        title="Contact"
         cta={{ to: "/contact", label: "Get in Touch", icon: <FiMail /> }}
       >
         <ContactHighlight />
