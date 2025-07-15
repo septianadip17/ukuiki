@@ -45,7 +45,7 @@ export default function Landing() {
 
       <Section
         id="about"
-        title="About UKUiki"
+        title="About"
         cta={{ to: "/about", label: "Learn More", icon: <FiInfo /> }}
       >
         <AboutHighlight />
