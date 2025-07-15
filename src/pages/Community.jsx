@@ -3,7 +3,7 @@ import community from "../data/community";
 export default function Community() {
   return (
     <section className="mx-auto max-w-5xl px-4 py-8">
-      <h1 className="mb-6 text-3xl font-bold text-primary">Berita Komunitas</h1>
+      <h1 className="mb-6 text-3xl font-bold text-primary">Community Highlight</h1>
       <div className="space-y-6">
         {community.map((item) => (
           <article

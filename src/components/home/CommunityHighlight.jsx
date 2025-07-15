@@ -8,10 +8,10 @@ export default function CommunityHighlight() {
         {/* Text Section */}
         <div className="order-2 md:order-1 text-center md:text-left">
           <h3 className="text-2xl md:text-3xl font-extrabold text-primary mb-4">
-            Our Community Activities 🎶
+            UKUiki Club
           </h3>
           <p className="text-gray-700 leading-relaxed mb-5">
-            UKUiki was born from a common question after our workshops:
+            UKUiki Club was born from a common question after our workshops:
             <strong> “Where can we play ukulele together?”</strong>
             <br />
             <br />
@@ -25,7 +25,7 @@ export default function CommunityHighlight() {
             className="inline-block rounded-full bg-primary px-6 py-3 text-white font-medium shadow hover:bg-primary-dark transition group"
           >
             <FiCamera className="inline-block mr-2 group-hover:animate-bounce" />
-            View Documentation
+            Highlight
           </Link>
         </div>
 
