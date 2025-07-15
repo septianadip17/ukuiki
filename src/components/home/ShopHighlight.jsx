@@ -3,8 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { Link } from "react-router-dom";
 import { FiShoppingCart, FiShoppingBag } from "react-icons/fi";
-import { generateWhatsAppLink } from "../utils/GenerateWhatsAppLink";
-
+import { buyProduct } from "../utils/BuyProduct.jsx";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -45,7 +44,7 @@ function ProductCardMini({ product }) {
             {product.price}
           </span>
           <a
-            href={generateWhatsAppLink(product.name)}
+            href={buyProduct(product.name)}
             target="_blank"
             rel="noopener noreferrer"
             className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm shadow transition font-medium ${

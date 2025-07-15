@@ -2,6 +2,7 @@ import { useState } from "react";
 import events from "../data/events.js";
 import ImageModal from "../components/common/ImageModal.jsx";
 import { FiArrowRightCircle } from "react-icons/fi";
+import {JoinWorkshop} from "../components/utils/JoinWorkshop.jsx";
 
 export default function Events() {
   const today = new Date();
@@ -59,7 +60,7 @@ export default function Events() {
               </p>
               <p className="text-sm text-gray-700 mb-3">{w.location}</p>
               <a
-                href={w.link}
+                href={JoinWorkshop(w.title)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-auto inline-block w-max rounded-full bg-primary px-5 py-2 text-sm text-white hover:bg-primary-dark transition duration-300 group"

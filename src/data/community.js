@@ -3,7 +3,7 @@ export default [
     id: 1,
     title: "UKUiki Goes to Museum",
     content:
-      "Komunitas Ukuiki menggelar jam session dan open mic di Museum Bank Indonesia. Acara ini diikuti 30+ pemain ukulele dari berbagai usia!",
+      "UKUiki Club got an opportunity to collaborate with Museum Bank Indonesia. We explored the Museum with wonderful guides that explained the history of Museum BI. We're also strumming the ukuleles and singing some national songs, and at the end of the day took pictures together! Thank you! Museum Bank Indonesia for the opportunity.",
     image: "/community/museum-bi.jpg",
   },
   {
@@ -19,5 +19,5 @@ export default [
     content:
       "UKUiki Club resmi diluncurkan! Acara ini dihadiri oleh anggota komunitas dan penggemar ukulele. Banyak yang berbagi pengalaman dan belajar",
     image: "/community/ioef-mbloc.jpg",
-  }
+  },
 ];
