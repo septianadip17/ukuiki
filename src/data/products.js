@@ -3,7 +3,7 @@ export default [
     id: 1,
     name: "Hibiscus painting on soprano",
     price: "Rp. xxx.xxx",
-    image: "/ukulele/hibiscusSoprano.jpg",
+    image: "/ukulele/hibiscusSoprano.png",
     desc: "...",
     link: "https://wa.me/62818749604?text=Saya%20mau%20beli%20ukulele%20Hibiscus%20painting%20on%20soprano",
   },
