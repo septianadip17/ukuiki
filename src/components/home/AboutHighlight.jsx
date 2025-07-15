@@ -17,7 +17,7 @@ export default function AboutHighlight() {
         </Link>
       </div>
       <img
-        src="/community/ioef-mbloc.jpg"
+        src="/ukuiki/kakgraz-painting.jpg"
         alt="About UKUiki"
         className="md:w-1/2 w-full rounded-lg shadow"
       />
