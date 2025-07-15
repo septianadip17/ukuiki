@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { Link } from "react-router-dom";
 import { FiShoppingCart, FiShoppingBag } from "react-icons/fi";
+import { generateWhatsAppLink } from "../utils/GenerateWhatsAppLink";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -11,8 +12,18 @@ import "swiper/css/pagination";
 import products from "../../data/products";
 
 function ProductCardMini({ product }) {
+  const isSold = product.badge?.toLowerCase() === "sold";
+
   return (
-    <div className="rounded-2xl bg-white shadow-md hover:shadow-lg transition-all overflow-hidden mb-10">
+    <div className="relative rounded-2xl bg-white shadow-md hover:shadow-lg transition-all overflow-hidden flex flex-col h-full mb-10">
+      {/* Badge */}
+      {product.badge && (
+        <span className="absolute top-3 left-3 z-10 bg-red-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow">
+          {product.badge}
+        </span>
+      )}
+
+      {/* Gambar */}
       <Link to={`/shop/${product.id}`} className="block group relative">
         <img
           src={product.image}
@@ -20,22 +31,32 @@ function ProductCardMini({ product }) {
           className="w-full aspect-square object-cover transition-transform duration-300 group-hover:scale-105"
         />
       </Link>
-      <div className="p-4 flex flex-col h-full">
-        <h3 className="text-lg font-bold text-primary mb-1">{product.name}</h3>
-        <p className="text-sm text-gray-600 line-clamp-3">{product.desc}</p>
-        <div className="mt-2 font-semibold text-primary-light">
-          {product.price}
-        </div>
 
-        <div className="mt-auto flex justify-end">
+      {/* Detail */}
+      <div className="p-4 flex flex-col justify-between flex-1">
+        <div>
+          <h3 className="text-lg font-bold text-primary mb-1">
+            {product.name}
+          </h3>
+          <p className="text-sm text-gray-600 line-clamp-3">{product.desc}</p>
+        </div>
+        <div className="mt-3 flex justify-between items-center">
+          <span className="font-semibold text-primary-light">
+            {product.price}
+          </span>
           <a
-            href={product.link}
+            href={generateWhatsAppLink(product.name)}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-max rounded-full bg-primary px-5 py-2 text-sm text-white hover:bg-primary-dark transition"
+            className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm shadow transition font-medium ${
+              isSold
+                ? "bg-gray-300 cursor-not-allowed text-white"
+                : "bg-primary text-white hover:bg-primary-dark"
+            }`}
+            {...(isSold && { onClick: (e) => e.preventDefault() })}
           >
-            <FiShoppingCart className="inline-block mr-2" />
-            Buy Now
+            <FiShoppingCart className="text-base" />
+            {isSold ? "Sold Out" : "Buy Now"}
           </a>
         </div>
       </div>
