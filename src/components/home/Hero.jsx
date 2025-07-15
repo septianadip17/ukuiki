@@ -4,7 +4,7 @@ import { FiShoppingBag, FiCalendar } from "react-icons/fi";
 const Hero = () => {
   return (
     <section
-      className="relative flex items-center min-h-[50vh] md:min-h-[60vh] bg-cover bg-center px-4"
+      className="relative flex items-center min-h-[50vh] md:min-h-[70vh] bg-cover bg-center px-4"
       style={{ backgroundImage: 'url("/ukulele/unicorn-ukulele.jpg")' }}
     >
       {/* Overlay */}

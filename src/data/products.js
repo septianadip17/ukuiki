@@ -1,7 +1,7 @@
 export default [
   {
     id: 1,
-    name: "Hibiscus painting on soprano",
+    name: "Hibiscus Painting on Soprano",
     price: "Rp. xxx.xxx",
     image: "/ukulele/hibiscusSoprano.png",
     desc: "...",
@@ -9,7 +9,7 @@ export default [
   },
   {
     id: 2,
-    name: "Batik painting on soprano",
+    name: "Batik Painting on Soprano",
     price: "Rp. xxx.xxx",
     image: "/ukulele/batikSoprano.jpg",
     desc: "...",
@@ -17,7 +17,7 @@ export default [
   },
   {
     id: 3,
-    name: "Dayak painting on tenor trembesi",
+    name: "Dayak Painting on Tenor Trembesi",
     price: "Rp. x.xxx.xxx",
     image: "/ukulele/dayakTenor.jpg",
     desc: "...",
