@@ -24,7 +24,7 @@ export default function EventsHighlight() {
             autoplay={{ delay: 2500, disableOnInteraction: false }}
             pagination={{ clickable: true }}
             loop={true}
-            className="w-full h-[240px] sm:h-[280px] md:h-[320px] rounded-xl shadow-md"
+            className="aspect-[3/4] w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto rounded-xl shadow-md"
           >
             {eventImages.map((img, index) => (
               <SwiperSlide key={index}>
