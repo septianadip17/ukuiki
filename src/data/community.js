@@ -10,14 +10,14 @@ export default [
     id: 2,
     title: "UKUiki Annual Concert",
     content:
-      "Gripa Studio menjadi tuan rumah konser akustik yang menampilkan musisi lokal. Banyak yang datang untuk menikmati suasana santai dan musik yang indah.",
+      "UKUiki performs an annual ukulele  concert involving members as performers. Each year the concert carries different themes but always uses the ukulele as the main instrument.",
     image: "/community/concert-at-gripa.jpeg",
   },
   {
     id: 3,
     title: "UKUiki Ensemble",
     content:
-      "UKUiki Club resmi diluncurkan! Acara ini dihadiri oleh anggota komunitas dan penggemar ukulele. Banyak yang berbagi pengalaman dan belajar",
+      "Ukuiki Ensemble as a part of ukuiki is a group that performs in many events and festivals. The performers are varied in ages and skills yet create beautiful melodies in harmony.",
     image: "/community/ioef-mbloc.jpg",
   },
 ];

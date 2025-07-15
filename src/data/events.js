@@ -4,7 +4,7 @@ export default [
     title: "UKUiki Summer Class",
     date: "2025-07-13",
     time: "09.30 AM – 11.00 AM",
-    location: "Jakarta Escape, Jatimurni, Jakarta",
+    location: "Sekolah Kembang, South Jakarta",
     desc: "A beginner class specialized for kids starts from 6.YO up. Join our fun class in collaboration with Club Kembang and learn how to play ukulele.",
     photo: "/banner/summer-class.webp",
   },
