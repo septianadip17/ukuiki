@@ -43,7 +43,7 @@ export default function Shop() {
               <img
                 src={p.image}
                 alt={p.name}
-                className="h-60 w-full object-cover transition duration-300 group-hover:scale-105"
+                className="w-full aspect-square object-cover transition duration-300 group-hover:scale-105"
               />
               <div className="flex flex-1 flex-col p-4">
                 <h2 className="text-lg font-semibold text-primary">{p.name}</h2>
