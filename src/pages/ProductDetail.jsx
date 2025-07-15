@@ -104,7 +104,7 @@ export default function ProductDetail() {
 
       {/* ---- Product Recommendations ---- */}
       <div className="mt-16">
-        <h2 className="mb-4 text-2xl font-bold text-primary">Produk Lainnya</h2>
+        <h2 className="mb-4 text-2xl font-bold text-primary">Another Product You Might Like</h2>
         <ProductPreview excludeId={product.id} />
       </div>
 
