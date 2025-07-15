@@ -12,12 +12,12 @@ import products from "../../data/products";
 
 function ProductCardMini({ product }) {
   return (
-    <div className="rounded-2xl bg-white shadow-md hover:shadow-lg transition-all overflow-hidden">
+    <div className="rounded-2xl bg-white shadow-md hover:shadow-lg transition-all overflow-hidden mb-10">
       <Link to={`/shop/${product.id}`} className="block group relative">
         <img
           src={product.image}
           alt={product.name}
-          className="w-full aspect-video object-cover transition-transform duration-300 group-hover:scale-105"
+          className="w-full aspect-square object-cover transition-transform duration-300 group-hover:scale-105"
         />
       </Link>
       <div className="p-4 flex flex-col h-full">
@@ -26,15 +26,18 @@ function ProductCardMini({ product }) {
         <div className="mt-2 font-semibold text-primary-light">
           {product.price}
         </div>
-        <a
-          href={product.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-4 w-max rounded-full bg-primary px-5 py-2 text-sm text-white hover:bg-primary-dark transition"
-        >
-          <FiShoppingCart className="inline-block mr-2" />
-          Buy Now
-        </a>
+
+        <div className="mt-auto flex justify-end">
+          <a
+            href={product.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-max rounded-full bg-primary px-5 py-2 text-sm text-white hover:bg-primary-dark transition"
+          >
+            <FiShoppingCart className="inline-block mr-2" />
+            Buy Now
+          </a>
+        </div>
       </div>
     </div>
   );
@@ -50,8 +53,9 @@ export default function ShopHighlight() {
       {/* Section Header */}
       <div className="text-center mb-5">
         <p className="text-gray-600 max-w-xl mx-auto leading-relaxed">
-          Discover our handpicked selection of best-selling products—perfect for
-          your lifestyle and everyday needs.
+          We provide varies of ukuleles and accessories. Shop our unique
+          handpainted ukuleles, or order one with customized paintings. Explore
+          our premium ukuleles that suitable for your needs.
         </p>
       </div>
 

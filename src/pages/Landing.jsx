@@ -21,7 +21,7 @@ export default function Landing() {
 
       <Section
         id="shop"
-        title="Let's Check Our Shop"
+        title="Shop Now"
         cta={{ to: "/shop", label: "Explore Shop", icon: <FiShoppingBag /> }}
       >
         <ShopHighlight />
