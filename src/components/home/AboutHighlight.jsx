@@ -37,7 +37,7 @@ export default function AboutHighlight() {
         <div className="md:w-1/2 w-full">
           <div className="relative overflow-hidden rounded-3xl shadow-lg aspect-[4/3]">
             <img
-              src="/ukuiki/grazPaints.jpg"
+              src="/ukuiki/grazPaints.JPG"
               alt="About UKUiki"
               className="w-full h-full object-cover"
             />

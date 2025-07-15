@@ -88,19 +88,13 @@ export default function About() {
             </a>
           </div>
 
-          {/* Instagram Embed */}
+          {/* Image */}
           <div className="flex justify-center">
-            <div className="w-full overflow-hidden rounded-xl shadow-lg aspect-[4/5]">
-              <iframe
-                src="https://www.instagram.com/ukuiki/embed"
-                loading="lazy"
-                title="Instagram Ukuiki"
-                className="w-full h-full"
-                frameBorder="0"
-                scrolling="no"
-                style={{ backgroundColor: "transparent" }}
-              ></iframe>
-            </div>
+            <img
+              src="/ukuiki/kakgraz-painting.jpg" // Replace with your image path
+              alt="UKUiki Ukulele"
+              className="max-w-full rounded-lg shadow-lg"
+            />
           </div>
         </div>
       </div>
