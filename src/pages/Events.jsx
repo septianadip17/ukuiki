@@ -43,7 +43,7 @@ export default function Events() {
                 src={w.photo}
                 alt={w.title}
                 onClick={() => handleImageClick(w.photo, w.title)}
-                className="w-full h-56 md:h-64 object-cover cursor-pointer transition duration-300 ease-in-out transform hover:scale-105 hover:-translate-y-1 rounded-t-2xl hover:shadow-lg"
+                className="w-full aspect-square object-cover cursor-pointer transition duration-300 ease-in-out transform hover:scale-105 hover:-translate-y-1 rounded-t-2xl hover:shadow-lg"
               />
             )}
             <div className="flex flex-col p-5 flex-1">

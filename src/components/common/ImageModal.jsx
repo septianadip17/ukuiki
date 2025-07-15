@@ -37,7 +37,7 @@ export default function ImageModal({ isOpen, onClose, imageSrc, alt }) {
             className="flex items-center justify-center gap-2 rounded-full border border-primary px-5 py-2 text-primary shadow-sm transition hover:bg-primary-dark hover:text-white"
           >
             <FiX className="text-xl" />
-            Tutup Gambar
+            Close
           </button>
         </div>
       </div>
