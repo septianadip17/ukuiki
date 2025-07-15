@@ -1,5 +1,13 @@
 export default [
   {
+    id: 0,
+    name: "Customize Your Ukulele",
+    price: "Rp. xxx.xxx",
+    image: "/ukulele/ukuleleCustom.jpg",
+    desc: "Customize your own ukulele with unique designs and colors or paintings.",
+    badge: null,
+  },
+  {
     id: 1,
     name: "Hibiscus Painting on Soprano",
     price: "Rp. xxx.xxx",
