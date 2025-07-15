@@ -1,44 +1,71 @@
 import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
+import { FiSearch, FiShoppingCart } from "react-icons/fi";
+import { BuyProduct } from "../utils/BuyProduct.jsx";
 
-export default function ProductCard({ product }) {
+export default function ProductCard({
+  product,
+  showButton = true,
+  compact = false,
+}) {
+  const isSold = product.badge?.toLowerCase() === "sold";
+
   return (
-    <Link
-      to={`/shop/${product.id}`}
-      className="group snap-start flex-shrink-0 w-72 md:w-auto flex flex-col overflow-hidden rounded-2xl bg-white shadow transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
-    >
-      <div className="relative h-60 w-full overflow-hidden">
+    <div className="group relative flex flex-col overflow-hidden rounded-2xl bg-white shadow hover:shadow-lg transition mb-10">
+      {/* Badge */}
+      {isSold && (
+        <span className="absolute top-3 left-3 z-10 bg-red-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow">
+          SOLD
+        </span>
+      )}
+
+      {/* Gambar */}
+      <Link to={`/shop/${product.id}`} className="block">
         <img
           src={product.image}
           alt={product.name}
-          className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+          className="w-full aspect-square object-cover transition duration-300 group-hover:scale-105"
         />
-      </div>
+      </Link>
 
-      <div className="flex flex-1 flex-col p-4">
-        <h2 className="text-lg font-semibold text-gray-900">{product.name}</h2>
-        <p className="mb-2 text-sm text-gray-500 line-clamp-2">
-          {product.desc}
-        </p>
-
-        <span className="mb-4 font-bold text-primary-light">
+      {/* Konten */}
+      <div className="p-4 flex flex-col flex-1">
+        <h2 className="text-lg font-semibold text-primary mb-1">
+          {product.name}
+        </h2>
+        <p className="text-sm text-gray-600 line-clamp-2">{product.desc}</p>
+        <span className="mt-2 font-bold text-primary-light">
           {product.price}
         </span>
 
-        <span className="mt-auto inline-block rounded-full bg-primary px-4 py-2 text-center text-white text-sm font-medium hover:bg-primary-dark transition">
-          Lihat Detail
-        </span>
+        {showButton && (
+          <div className="mt-auto pt-4">
+            {compact ? (
+              <Link
+                to={`/shop/${product.id}`}
+                className="inline-flex items-center gap-2 rounded-full bg-primary text-white text-sm px-4 py-2 hover:bg-primary-dark transition"
+              >
+                <FiSearch />
+                See Details
+              </Link>
+            ) : (
+              <a
+                href={BuyProduct(product.name)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm shadow font-medium transition ${
+                  isSold
+                    ? "bg-gray-300 text-white cursor-not-allowed"
+                    : "bg-primary text-white hover:bg-primary-dark"
+                }`}
+                {...(isSold && { onClick: (e) => e.preventDefault() })}
+              >
+                <FiShoppingCart className="text-base" />
+                {isSold ? "Sold Out" : "Buy Now"}
+              </a>
+            )}
+          </div>
+        )}
       </div>
-    </Link>
+    </div>
   );
 }
-
-ProductCard.propTypes = {
-  product: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string,
-    image: PropTypes.string,
-    desc: PropTypes.string,
-    price: PropTypes.string,
-  }).isRequired,
-};

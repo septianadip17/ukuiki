@@ -6,6 +6,7 @@ import products from "../data/products";
 import ImageModal from "../components/shop/ImageModal";
 import ProductPreview from "../components/shop/ProductPreview";
 import { BuyProduct } from "../components/utils/BuyProduct";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function ProductDetail() {
   const { productId } = useParams();
@@ -67,6 +68,7 @@ export default function ProductDetail() {
             rel="noopener noreferrer"
             className="inline-block rounded-full bg-primary px-4 py-2 text-white transition hover:bg-primary-dark"
           >
+            <FaWhatsapp className="inline-block text-xl mr-2" />
             Buy Via WhatsApp{" "}
           </a>
         </div>

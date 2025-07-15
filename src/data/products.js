@@ -29,7 +29,7 @@ export default [
     price: "Rp. x.xxx.xxx",
     image: "/ukulele/dayakTenor.jpg",
     desc: "Bold Dayak tribal design painted on tenor trembesi wood ukulele.",
-    badge: null,
+    badge: "sold",
   },
   {
     id: 4,
