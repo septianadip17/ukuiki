@@ -2,7 +2,7 @@ import { useState } from "react";
 import events from "../data/events.js";
 import ImageModal from "../components/common/ImageModal.jsx";
 import { FiArrowRightCircle } from "react-icons/fi";
-import {JoinWorkshop} from "../components/utils/JoinWorkshop.jsx";
+import { JoinWorkshop } from "../components/utils/JoinWorkshop.jsx";
 
 export default function Events() {
   const today = new Date();
@@ -51,7 +51,6 @@ export default function Events() {
               <p className="text-gray-600 mb-2 line-clamp-3">{w.desc}</p>
               <p className="text-sm text-gray-500 mb-1">
                 {new Date(w.date).toLocaleDateString("en-EN", {
-                  weekday: "long",
                   day: "numeric",
                   month: "long",
                   year: "numeric",
