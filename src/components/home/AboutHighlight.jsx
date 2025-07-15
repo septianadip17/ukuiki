@@ -7,7 +7,7 @@ export default function AboutHighlight() {
       {/* Text Section */}
       <div className="md:w-1/2 text-center md:text-left">
         <h3 className="text-2xl font-extrabold text-primary mb-3">
-          UKUiki
+          We've been painting since 2016
         </h3>
         <p className="text-gray-700 mb-4 leading-relaxed">
           UKUiki was formed in early 2016 to express our love for art and music.
@@ -20,8 +20,7 @@ export default function AboutHighlight() {
         <p className="text-gray-700 mb-6 leading-relaxed">
           All our ukuleles are handpainted—customized to each customer’s style
           and budget. We also offer unique designs like the Christmas, Fox, and
-          Fairy series. Prices start from Rp550.000 for regular and Rp3.500.000+
-          for premium editions.
+          Fairy series. 
         </p>
         <Link
           to="/about"

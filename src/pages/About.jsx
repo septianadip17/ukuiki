@@ -1,71 +1,104 @@
-// src/pages/About.jsx
+import { FiInstagram } from "react-icons/fi";
+
 export default function About() {
   return (
     <section className="relative">
-      {/* ── Background Gradient ─ */}
+      {/* Background Gradient */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary/10 via-white to-primary/5" />
 
       <div className="mx-auto max-w-5xl px-4 py-16">
-        {/* ── Hero Section ─ */}
+        {/* Hero */}
         <header className="text-center">
           <h1 className="mb-4 text-4xl font-extrabold text-primary drop-shadow">
-            Tentang <span className="text-primary-light">UKUiki</span>
+            About <span className="text-primary-light">UKUiki</span>
           </h1>
           <p className="mx-auto mb-10 max-w-2xl text-lg text-gray-700">
-            UKUiki adalah komunitas kreatif pecinta ukulele. Kami berbagi
-            inspirasi, karya, dan pengetahuan melalui pertemuan offline,
-            workshop, serta media sosial.
+            UKUiki was founded in early 2016 to express our love for art and
+            music by painting ukuleles. What began as a personal passion grew
+            into something more meaningful.
           </p>
         </header>
 
-        {/* ── 2-Column Layout ─ */}
         <div className="grid gap-10 lg:grid-cols-2">
-          {/* ── Text Column ─ */}
+          {/* Text */}
           <div className="space-y-6 text-gray-700">
             <section>
               <h2 className="mb-2 text-2xl font-semibold text-primary">
-                Misi Kami
+                Our Story
               </h2>
               <p>
-                Menyebarkan kebahagiaan musik sederhana lewat ukulele—alat musik
-                kecil bersenar empat yang gampang dipelajari siapa saja.
-                Komunitas ini terbuka untuk semua umur dan latar belakang.
+                Encouraged by positive feedback from friends, family, and
+                customers, we began organizing workshops and ukulele classes to
+                spread the joy of music and help others learn.
+              </p>
+              <p>
+                To keep in touch with alumni of our classes, we founded the{" "}
+                <strong>UKUiki Club</strong> — a friendly community where
+                members share ukulele knowledge, jam together, and build
+                friendships.
+              </p>
+              <p>
+                Fueled by our shared love of music, the{" "}
+                <strong>UKUiki Ensemble</strong> was later formed as a group
+                that performs and celebrates ukulele music together.
               </p>
             </section>
 
             <section>
               <h2 className="mb-2 text-2xl font-semibold text-primary">
-                Kenapa Ukulele?
+                Handpainted Ukuleles
               </h2>
-              <ul className="list-disc space-y-1 pl-5">
-                <li>Mudah dimainkan & terjangkau.</li>
-                <li>Portabel—bisa dibawa ke mana saja.</li>
-                <li>Cocok untuk kolaborasi dan jam session.</li>
-              </ul>
+              <p>
+                All of our ukuleles are hand-painted with customizable designs,
+                making each one personal and unique. We also offer our own
+                exclusive collections like the
+                <em> Christmas Series, Fox Series, and Fairy Series</em>.
+              </p>
+              <p>
+                Our products are mainly sold online via Instagram{" "}
+                <a
+                  href="https://instagram.com/ukuiki"
+                  className="text-primary underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  @ukuiki
+                </a>{" "}
+                and painted by{" "}
+                <a
+                  href="https://instagram.com/grazsuwuu"
+                  className="text-primary underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  @grazsuwuu
+                </a>
+              </p>
             </section>
 
-            {/* ── Instagram CTA ─ */}
+            {/* CTA */}
             <a
               href="https://instagram.com/ukuiki"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block rounded-full bg-primary px-6 py-3 font-medium text-white shadow hover:bg-primary-dark"
+              className="inline-block rounded-full bg-primary px-6 py-3 font-medium text-white shadow hover:bg-primary-dark transition"
             >
-              Ikuti Instagram Kami
+              <FiInstagram className="inline-block text-xl mr-2" />
+              Follow Us on Instagram
             </a>
           </div>
 
-          {/* ── Instagram Embed ─ */}
+          {/* Instagram Embed */}
           <div className="flex justify-center">
-            <div className="w-full overflow-hidden rounded-xl shadow-lg">
+            <div className="w-full overflow-hidden rounded-xl shadow-lg aspect-[4/5]">
               <iframe
                 src="https://www.instagram.com/ukuiki/embed"
                 loading="lazy"
                 title="Instagram Ukuiki"
-                className="aspect-[4/5] w-full"
+                className="w-full h-full"
                 frameBorder="0"
                 scrolling="no"
-                style={{ backgroundColor: "transparent" }} // ✅ fix warning
+                style={{ backgroundColor: "transparent" }}
               ></iframe>
             </div>
           </div>

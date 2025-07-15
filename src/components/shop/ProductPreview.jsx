@@ -1,5 +1,4 @@
 import { useMemo, useState, useEffect } from "react";
-import PropTypes from "prop-types";
 import products from "../../data/products.js";
 import ProductCard from "./ProductCard";
 import ProductCardSkeleton from "./ProductCardSkeleton";
@@ -40,7 +39,3 @@ export default function ProductPreview({ excludeId }) {
     </div>
   );
 }
-
-ProductPreview.propTypes = {
-  excludeId: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};

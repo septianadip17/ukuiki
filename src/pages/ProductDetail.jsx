@@ -5,6 +5,7 @@ import { FiShoppingBag } from "react-icons/fi";
 import products from "../data/products";
 import ImageModal from "../components/shop/ImageModal";
 import ProductPreview from "../components/shop/ProductPreview";
+import { BuyProduct } from "../components/utils/BuyProduct";
 
 export default function ProductDetail() {
   const { productId } = useParams();
@@ -61,14 +62,12 @@ export default function ProductDetail() {
           </p>
 
           <a
-            href={`https://wa.me/6289696135242?text=Halo%20Ukuiki,%20saya%20tertarik%20dengan%20${encodeURIComponent(
-              product.name
-            )}`}
+            href={BuyProduct(product.name)}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block rounded-full bg-primary px-6 py-2 text-white transition hover:bg-primary-dark"
+            className="inline-block rounded-full bg-primary px-4 py-2 text-white transition hover:bg-primary-dark"
           >
-            Beli via WhatsApp
+            Buy Via WhatsApp{" "}
           </a>
         </div>
       </div>
