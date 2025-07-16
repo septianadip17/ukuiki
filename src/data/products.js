@@ -6,6 +6,7 @@ export default [
     image: "/ukulele/ukuleleCustom.jpg",
     desc: "Customize your own ukulele with unique designs and colors or paintings.",
     badge: null,
+    sold: false,
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ export default [
     image: "/ukulele/hibiscusSoprano.png",
     desc: "Hand-painted hibiscus art on a soprano ukulele. Bright and tropical.",
     badge: null,
+    sold: false,
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ export default [
     image: "/ukulele/batikSoprano.jpg",
     desc: "Traditional batik motifs on a soprano ukulele. Cultural and elegant.",
     badge: null,
+    sold: false,
   },
   {
     id: 4,
@@ -30,6 +33,7 @@ export default [
     image: "/ukulele/dayakTenor.jpg",
     desc: "Bold Dayak tribal design painted on tenor trembesi wood ukulele.",
     badge: "sold",
+    sold: true,
   },
   {
     id: 5,
@@ -38,6 +42,7 @@ export default [
     image: "/tshirt/ukuiki-tshirt-black.jpeg",
     desc: "Stylish black UKUiki shirt made from soft cotton fabric.",
     badge: null,
+    sold: false,
   },
   {
     id: 6,
@@ -46,6 +51,7 @@ export default [
     image: "/tshirt/ukuiki-tshirt-purple.jpeg",
     desc: "Fresh purple tee with UKUiki branding. Cool and comfy.",
     badge: null,
+    sold: false,
   },
   {
     id: 7,
@@ -54,5 +60,6 @@ export default [
     image: "/tshirt/ukuiki-tshirt-lilac.jpeg",
     desc: "Soft lilac color shirt for a sweet and clean look.",
     badge: null,
+    sold: false,
   },
 ];

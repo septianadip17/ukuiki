@@ -16,10 +16,10 @@ export default function ProductPreview({ excludeId }) {
   const [loading, setLoading] = useState(true);
 
   const randomProducts = useMemo(() => {
-    const filtered = excludeId
-      ? products.filter((p) => p.id !== Number(excludeId))
-      : [...products];
-    return shuffleArray(filtered).slice(0, 3);
+    const filtered = products.filter(
+      (p) => !p.sold && p.id !== Number(excludeId)
+    );
+    return shuffleArray(filtered).slice(0, 4);
   }, [excludeId]);
 
   useEffect(() => {
@@ -28,9 +28,9 @@ export default function ProductPreview({ excludeId }) {
   }, []);
 
   return (
-    <div className="flex snap-x scroll-smooth gap-6 overflow-x-auto px-1 md:grid md:grid-cols-3 md:overflow-visible md:snap-none">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 px-1">
       {loading
-        ? Array.from({ length: 3 }).map((_, idx) => (
+        ? Array.from({ length: 4 }).map((_, idx) => (
             <ProductCardSkeleton key={idx} />
           ))
         : randomProducts.map((product) => (
