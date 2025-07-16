@@ -26,6 +26,14 @@ export default function Landing() {
       >
         <ShopHighlight />
       </Section>
+      
+      <Section
+        id="events"
+        title="Events"
+        cta={{ to: "/events", label: "View Schedule", icon: <FiCalendar /> }}
+      >
+        <EventsHighlight />
+      </Section>
 
       <Section
         id="community"
@@ -33,14 +41,6 @@ export default function Landing() {
         cta={{ to: "/community", label: "See More", icon: <FiUsers /> }}
       >
         <CommunityHighlight />
-      </Section>
-
-      <Section
-        id="events"
-        title="Events"
-        cta={{ to: "/events", label: "View Schedule", icon: <FiCalendar /> }}
-      >
-        <EventsHighlight />
       </Section>
 
       <Section

@@ -7,8 +7,8 @@ import ukuikiLogo from "../assets/ukuikiLogo.png";
 const MENU = [
   { label: "Home", hash: "#top", page: "/" },
   { label: "Shop", hash: "#shop", page: "/shop" },
-  { label: "Community", hash: "#community", page: "/community" },
   { label: "Events", hash: "#events", page: "/events" },
+  { label: "Community", hash: "#community", page: "/community" },
   { label: "About", hash: "#about", page: "/about" },
   { label: "Contact", hash: "#contact", page: "/contact" },
 ];
