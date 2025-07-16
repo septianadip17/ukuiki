@@ -51,6 +51,7 @@ export default function Events() {
               <p className="text-gray-600 mb-2 line-clamp-3">{w.desc}</p>
               <p className="text-sm text-gray-500 mb-1">
                 {new Date(w.date).toLocaleDateString("en-EN", {
+                  weekday: "long",
                   day: "numeric",
                   month: "long",
                   year: "numeric",
