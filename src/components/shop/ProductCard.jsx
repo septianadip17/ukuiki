@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { FiSearch, FiShoppingCart } from "react-icons/fi";
 import { BuyProduct } from "../utils/BuyProduct.jsx";
+import soldBadge from "../../assets/soldBadge.png";
 
 export default function ProductCard({
   product,
@@ -13,8 +14,8 @@ export default function ProductCard({
     <div className="group relative flex flex-col overflow-hidden rounded-2xl bg-white shadow hover:shadow-lg transition mb-10">
       {/* Badge */}
       {isSold && (
-        <span className="absolute top-3 left-3 z-10 bg-red-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow">
-          SOLD
+        <span className="absolute top-3 right-3 z-10">
+          <img src={soldBadge} alt="sold" className="w-16" />
         </span>
       )}
 
