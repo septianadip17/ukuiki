@@ -38,8 +38,7 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-10 grid grid-cols-2 gap-10 sm:grid-cols-4 md:grid-cols-4">
         <div>
           <Link to="/" className="flex items-center mb-4">
-
-            <img src={whiteLogo} alt="" className="w-32" />
+            <img src={whiteLogo} alt="ukuiki logo" className="w-32" />
           </Link>
           <p className="text-sm text-white/80 leading-relaxed">
             When art meets music, paintings and melodies through ukulele.

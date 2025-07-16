@@ -91,7 +91,7 @@ export default function About() {
           {/* Image */}
           <div className="flex justify-center">
             <img
-              src="/ukuiki/kakgraz-painting.jpg" // Replace with your image path
+              src="/ukuiki/kakgraz-painting.jpg"
               alt="UKUiki Ukulele"
               className="max-w-full rounded-lg shadow-lg"
             />
