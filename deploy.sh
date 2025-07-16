@@ -1,1 +1,1 @@
-source /home/ukuikic1/nodevenv/ukuiki/20/bin/activate && cd /home/ukuikic1/ukuiki && git fetch && git reset --hard origin/main && npm install && npm run build && npx pm2 serve --name ukuiki -- -s dist -l 3000 && npx pm2 list
+source /home/ukuikic1/nodevenv/ukuiki/20/bin/activate && cd /home/ukuikic1/ukuiki && git fetch && git reset --hard origin/main && npm install && npm run build && npx pm2 start serve --name ukuiki -- -s dist -l 3000 && npx pm2 list
