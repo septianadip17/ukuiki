@@ -1,6 +1,6 @@
 export default [
   {
-    id: 0,
+    id: 1,
     name: "Customize Your Ukulele",
     price: "Rp. xxx.xxx",
     image: "/ukulele/ukuleleCustom.jpg",
@@ -8,7 +8,7 @@ export default [
     badge: null,
   },
   {
-    id: 1,
+    id: 2,
     name: "Hibiscus Painting on Soprano",
     price: "Rp. xxx.xxx",
     image: "/ukulele/hibiscusSoprano.png",
@@ -16,7 +16,7 @@ export default [
     badge: null,
   },
   {
-    id: 2,
+    id: 3,
     name: "Batik Painting on Soprano",
     price: "Rp. xxx.xxx",
     image: "/ukulele/batikSoprano.jpg",
@@ -24,7 +24,7 @@ export default [
     badge: null,
   },
   {
-    id: 3,
+    id: 4,
     name: "Dayak Painting on Tenor Trembesi",
     price: "Rp. x.xxx.xxx",
     image: "/ukulele/dayakTenor.jpg",
@@ -32,7 +32,7 @@ export default [
     badge: "sold",
   },
   {
-    id: 4,
+    id: 5,
     name: "UKUiki T-Shirt Black",
     price: "Rp. 140.000",
     image: "/tshirt/ukuiki-tshirt-black.jpeg",
@@ -40,7 +40,7 @@ export default [
     badge: null,
   },
   {
-    id: 5,
+    id: 6,
     name: "UKUiki T-Shirt Purple",
     price: "Rp. 140.000",
     image: "/tshirt/ukuiki-tshirt-purple.jpeg",
@@ -48,7 +48,7 @@ export default [
     badge: null,
   },
   {
-    id: 6,
+    id: 7,
     name: "UKUiki T-Shirt Lilac",
     price: "Rp. 140.000",
     image: "/tshirt/ukuiki-tshirt-lilac.jpeg",
