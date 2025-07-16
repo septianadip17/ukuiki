@@ -2,11 +2,13 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { FiShoppingBag } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
+import { motion } from "framer-motion";
+
 import products from "../data/products";
 import ImageModal from "../components/shop/ImageModal";
 import ProductPreview from "../components/shop/ProductPreview";
 import { BuyProduct } from "../components/utils/BuyProduct";
-import { FaWhatsapp } from "react-icons/fa";
 
 export default function ProductDetail() {
   const { productId } = useParams();
@@ -22,22 +24,26 @@ export default function ProductDetail() {
   if (!product) {
     return (
       <section className="mx-auto max-w-4xl px-4 py-16 text-center">
-        <h1 className="text-2xl font-bold text-primary">
-          Produk tidak ditemukan
-        </h1>
+        <h1 className="text-2xl font-bold text-primary">Product not found</h1>
         <button
           onClick={() => navigate("/shop")}
           className="mt-4 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-2 text-white hover:bg-primary-dark"
         >
           <FiShoppingBag />
-          Kembali ke Shop
+          Back to Shop
         </button>
       </section>
     );
   }
 
   return (
-    <section className="mx-auto max-w-6xl px-4 py-12">
+    <motion.section
+      className="mx-auto max-w-6xl px-4 py-12"
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 30 }}
+      transition={{ duration: 0.5 }}
+    >
       {/* ---- Product Info ---- */}
       <div className="flex flex-col gap-8 md:flex-row">
         {/* Product Image */}
@@ -62,21 +68,26 @@ export default function ProductDetail() {
             {product.price}
           </p>
 
-          <a
-            href={BuyProduct(product.name)}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block rounded-full bg-primary px-4 py-2 text-white transition hover:bg-primary-dark"
-          >
-            <FaWhatsapp className="inline-block text-xl mr-2" />
-            Buy Via WhatsApp{" "}
-          </a>
+          {product.sold ? (
+            <span className="inline-block rounded-full bg-gray-400 px-4 py-2 text-white font-medium cursor-not-allowed">
+              Sold Out
+            </span>
+          ) : (
+            <a
+              href={BuyProduct(product.name)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block rounded-full bg-primary px-4 py-2 text-white transition hover:bg-primary-dark"
+            >
+              <FaWhatsapp className="inline-block text-xl mr-2" />
+              Buy Via WhatsApp
+            </a>
+          )}
         </div>
       </div>
 
       {/* ---- Navigation Buttons (Styled) ---- */}
       <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:justify-between">
-        {/* Prev Product */}
         <button
           onClick={() => navigate(`/shop/${prevProduct.id}`)}
           className="flex items-center justify-center gap-2 rounded-full border border-primary px-5 py-2 text-primary shadow-sm transition hover:bg-primary-light/10"
@@ -85,7 +96,6 @@ export default function ProductDetail() {
           <span className="text-sm font-medium">{prevProduct.name}</span>
         </button>
 
-        {/* Back to Shop */}
         <button
           onClick={() => navigate("/shop")}
           className="flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-2 text-sm font-medium text-white shadow-md transition hover:bg-primary-dark"
@@ -94,7 +104,6 @@ export default function ProductDetail() {
           Back to Shop
         </button>
 
-        {/* Next Product */}
         <button
           onClick={() => navigate(`/shop/${nextProduct.id}`)}
           className="flex items-center justify-center gap-2 rounded-full border border-primary px-5 py-2 text-primary shadow-sm transition hover:bg-primary-light/10"
@@ -106,7 +115,9 @@ export default function ProductDetail() {
 
       {/* ---- Product Recommendations ---- */}
       <div className="mt-16">
-        <h2 className="mb-4 text-2xl font-bold text-primary">Another Product You Might Like</h2>
+        <h2 className="mb-4 text-2xl font-bold text-primary">
+          Another Product You Might Like
+        </h2>
         <ProductPreview excludeId={product.id} />
       </div>
 
@@ -117,6 +128,6 @@ export default function ProductDetail() {
         imageSrc={product.image}
         alt={product.name}
       />
-    </section>
+    </motion.section>
   );
 }
