@@ -1,5 +1,3 @@
-import { FiInstagram } from "react-icons/fi";
-
 export default function About() {
   return (
     <section className="relative">
