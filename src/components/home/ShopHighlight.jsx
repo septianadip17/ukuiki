@@ -29,9 +29,9 @@ export default function ShopHighlight() {
       {/* Header */}
       <div className="text-center mb-5">
         <p className="text-gray-600 max-w-xl mx-auto leading-relaxed">
-          We provide varies of ukuleles and accessories. Shop our unique
-          handpainted ukuleles, or order one with customized paintings. Explore
-          our premium ukuleles that suitable for your needs.
+          We offer a variety of ukuleles and accessories. Shop our unique
+          hand-painted ukuleles, or order one with customised artwork. Explore
+          our premium ukuleles, thoughtfully crafted to suit your needs.
         </p>
       </div>
 
