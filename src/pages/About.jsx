@@ -6,13 +6,13 @@ export default function About() {
       {/* Background Gradient */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary/10 via-white to-primary/5" />
 
-      <div className="mx-auto max-w-5xl px-4 py-16">
+      <div className="mx-auto max-w-6xl px-4 py-16">
         {/* Hero */}
-        <header className="text-center">
+        <header className="text-center mb-12">
           <h1 className="mb-4 text-4xl font-extrabold text-primary drop-shadow">
             About <span className="text-primary-light">UKUiki</span>
           </h1>
-          <p className="mx-auto mb-10 max-w-2xl text-lg text-gray-700">
+          <p className="mx-auto max-w-2xl text-lg text-gray-700">
             UKUiki was founded in early 2016 to express our love for art and
             music by painting ukuleles. What began as a personal passion grew
             into something more meaningful.
@@ -51,8 +51,8 @@ export default function About() {
               <p>
                 All of our ukuleles are hand-painted with customizable designs,
                 making each one personal and unique. We also offer our own
-                exclusive collections like the
-                <em> Christmas Series, Fox Series, and Fairy Series</em>.
+                exclusive collections like the{" "}
+                <em>Christmas Series, Fox Series, and Fairy Series</em>.
               </p>
               <p>
                 Our products are mainly sold online via Instagram{" "}
@@ -73,29 +73,31 @@ export default function About() {
                 >
                   @grazsuwuu
                 </a>
+                .
               </p>
             </section>
-
-            {/* CTA */}
-            <a
-              href="https://instagram.com/ukuiki"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block rounded-full bg-primary px-6 py-3 font-medium text-white shadow hover:bg-primary-dark transition"
-            >
-              <FiInstagram className="inline-block text-xl mr-2" />
-              Follow Us on Instagram
-            </a>
           </div>
 
-          {/* Image */}
-          <div className="flex justify-center">
-            <img
-              src="/ukuiki/kakgraz-painting.jpg"
-              alt="UKUiki Ukulele"
-              className="max-w-full rounded-lg shadow-lg"
+          {/* Video */}
+          <div className="rounded-xl overflow-hidden shadow-lg">
+            <video
+              src="/videos/ukuiki-highlight.mp4"
+              autoPlay
+              loop
+              muted
+              controls
+              className="w-full h-full aspect-video object-cover"
             />
           </div>
+        </div>
+
+        {/* Image */}
+        <div className="mt-12 flex justify-center">
+          <img
+            src="/ukuiki/kakgraz-painting.jpg"
+            alt="UKUiki Ukulele"
+            className="max-w-full rounded-xl shadow-lg"
+          />
         </div>
       </div>
     </section>

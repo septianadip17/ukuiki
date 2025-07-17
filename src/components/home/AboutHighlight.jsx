@@ -12,17 +12,22 @@ export default function AboutHighlight() {
             We've been painting since 2016
           </h3>
           <p className="text-gray-700 mb-4 leading-relaxed">
-            UKUiki was formed in early 2016 to express our love for art and
-            music. We began by painting ukuleles and received positive feedback
-            from friends and family. Due to popular demand, we expanded to
-            workshops and ukulele classes. Later, we formed the UKUiki Club and
-            Ensemble to create a fun community for jam sessions, knowledge
-            sharing, and friendship.
+            UKUiki was formed in early 2016, to express our love of art and
+            music. We started from painting ukuleles, and got a lot of positive
+            feedback from customers, friends and family. By demands UKUiki later
+            started to do workshops and ukulele classes to spread the love of
+            music and to help people who want to learn playing ukulele. To
+            maintain a good relationship with all UKUiki Class Alumni, we
+            started UKUiki Club where all the members can share knowledge about
+            ukulele, jamming together or simply meet new friends. From the
+            ukulele club later driven by the passion of music UKUiki Ensemble
+            was established.
           </p>
           <p className="text-gray-700 mb-6 leading-relaxed">
-            All our ukuleles are handpainted—customized to each customer’s style
-            and budget. We also offer unique designs like the Christmas, Fox,
-            and Fairy series.
+            All of UKUiki Ukuleles are handpainted. The painting designs are
+            adjustable to customer’s demand. It makes UKUiki products are
+            unique, personalized and one of a kind. Customer also can choose the
+            size and kind of ukulele based on their budget.
           </p>
           <Link
             to="/about"
