@@ -21,9 +21,9 @@ export default function ContactHighlight() {
         <div className="w-full md:w-auto">
           <Link
             to="/contact"
-            className="inline-flex items-center justify-center w-full md:w-auto gap-2 rounded-full bg-primary px-6 py-3 text-white font-medium hover:bg-primary-dark transition duration-300 shadow"
+            className="group inline-flex justify-center items-center gap-3 rounded-full bg-primary mb-4 px-6 py-3 text-white font-medium shadow-md hover:bg-primary-dark transition duration-300"
           >
-            <FiMessageSquare className="text-lg" />
+            <FiMessageSquare className="text-lg group-hover:animate-bounce" />
             Let's Chat
           </Link>
         </div>

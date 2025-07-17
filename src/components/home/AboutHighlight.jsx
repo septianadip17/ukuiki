@@ -31,9 +31,9 @@ export default function AboutHighlight() {
           </p>
           <Link
             to="/about"
-            className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-white hover:bg-primary-dark transition font-semibold shadow"
+            className="group inline-flex justify-center items-center gap-3 rounded-full bg-primary mb-4 px-6 py-3 text-white font-medium shadow-md hover:bg-primary-dark transition duration-300"
           >
-            <FiInfo className="text-lg" />
+            <FiInfo className="text-lg group-hover:animate-bounce" />
             Learn More
           </Link>
         </div>
