@@ -81,10 +81,10 @@ export default function About() {
           {/* Video */}
           <div className="rounded-xl overflow-hidden shadow-lg">
             <video
-              src="/videos/ukuiki-highlight.mp4"
+              src="/videos/workshop-highlight.mp4"
               autoPlay
-              loop
               muted
+              loop
               controls
               className="w-full h-full aspect-video object-cover"
             />
@@ -92,7 +92,7 @@ export default function About() {
         </div>
 
         {/* Image */}
-        <div className="mt-12 flex justify-center">
+        <div className="mt-4 flex justify-center">
           <img
             src="/ukuiki/kakgraz-painting.jpg"
             alt="UKUiki Ukulele"
