@@ -1,8 +1,8 @@
-// src/pages/ProductDetail.jsx
 import { useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { FiShoppingBag } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
+import { useEffect } from "react";
 
 import products from "../data/products";
 import ImageModal from "../components/shop/ImageModal";
@@ -19,6 +19,11 @@ export default function ProductDetail() {
   const prevProduct =
     products[(currentIndex - 1 + products.length) % products.length];
   const nextProduct = products[(currentIndex + 1) % products.length];
+  useEffect(() => {
+    setActiveImage(product?.images?.[0] || product?.image);
+  }, [product]);
+
+  const [activeImage, setActiveImage] = useState(product?.images?.[0] || null);
 
   if (!product) {
     return (
@@ -39,16 +44,33 @@ export default function ProductDetail() {
     <section className="mx-auto max-w-6xl px-4 py-16">
       {/* ---- Product Info ---- */}
       <div className="flex flex-col gap-8 md:flex-row">
-        {/* Product Image */}
-        <div
-          className="flex-1 relative group cursor-zoom-in aspect-square"
-          onClick={() => setShowModal(true)}
-        >
-          <img
-            src={product.image}
-            alt={product.name}
-            className="w-full h-full object-cover rounded-xl shadow-lg transition duration-300 group-hover:scale-105"
-          />
+        {/* Product Images */}
+        <div className="flex-1">
+          <div
+            className="relative group cursor-zoom-in aspect-square overflow-hidden rounded-xl shadow-lg"
+            onClick={() => setShowModal(true)}
+          >
+            <img
+              src={activeImage}
+              alt={product.name}
+              className="w-full h-full object-cover transition duration-300 group-hover:scale-105"
+            />
+          </div>
+
+          {/* Thumbnails */}
+          <div className="flex gap-3 mt-4">
+            {(product.images || [product.image]).map((img, idx) => (
+              <img
+                key={idx}
+                src={img}
+                alt={`${product.name} ${idx + 1}`}
+                className={`w-16 h-16 rounded object-cover border-2 transition cursor-pointer ${
+                  img === activeImage ? "border-primary" : "border-transparent"
+                }`}
+                onClick={() => setActiveImage(img)}
+              />
+            ))}
+          </div>
         </div>
 
         {/* Product Detail */}
@@ -87,7 +109,6 @@ export default function ProductDetail() {
 
       {/* ---- Navigation Buttons ---- */}
       <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:justify-between">
-        {/* Prev Product */}
         <button
           onClick={() => navigate(`/shop/${prevProduct.id}`)}
           className="flex items-center justify-center gap-2 rounded-full border border-primary px-5 py-2 text-primary shadow-sm transition hover:bg-primary-light/10"
@@ -96,7 +117,6 @@ export default function ProductDetail() {
           <span className="text-sm font-medium">{prevProduct.name}</span>
         </button>
 
-        {/* Back to Shop */}
         <button
           onClick={() => navigate("/shop")}
           className="flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-2 text-sm font-medium text-white shadow-md transition hover:bg-primary-dark"
@@ -105,7 +125,6 @@ export default function ProductDetail() {
           Back to Shop
         </button>
 
-        {/* Next Product */}
         <button
           onClick={() => navigate(`/shop/${nextProduct.id}`)}
           className="flex items-center justify-center gap-2 rounded-full border border-primary px-5 py-2 text-primary shadow-sm transition hover:bg-primary-light/10"
@@ -127,7 +146,7 @@ export default function ProductDetail() {
       <ImageModal
         isOpen={showModal}
         onClose={() => setShowModal(false)}
-        imageSrc={product.image}
+        imageSrc={activeImage}
         alt={product.name}
       />
     </section>
