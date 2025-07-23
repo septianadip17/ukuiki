@@ -47,7 +47,7 @@ const products = [
     price: "Rp. x.xxx.xxx",
     images: [
       "/ukulele/tomUkuleleTenor2.jpeg",
-      "/ukulele/tomUkuleleTenor.jpg",
+      "/ukulele/tomUkuleleTenor.jpeg",
       "/ukulele/sizeChartTom.jpeg",
     ],
     desc: "Tenor ukulele painted with Tom character for a fun and playful vibe.",
