@@ -13,7 +13,7 @@ const products = [
     name: "Hibiscus Painting on Soprano",
     category: "ukulele",
     price: "Rp. xxx.xxx",
-    images: ["/ukulele/hibiscusSoprano.png, /ukulele/hibiscusFull.jpeg"],
+    images: ["/ukulele/hibiscusFull.jpeg, /ukulele/hibiscusSoprano.png"],
     desc: "Hand-painted hibiscus art on a soprano ukulele. Bright and tropical.",
     sold: false,
   },
