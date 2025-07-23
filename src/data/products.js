@@ -46,7 +46,7 @@ const products = [
     category: "ukulele",
     price: "Rp. x.xxx.xxx",
     images: [
-      "/ukulele/tomUkuleleTenor2.jpeg",
+      "/ukulele/tomUkulele-front.jpeg",
       "/ukulele/tomUkuleleTenor.jpeg",
       "/ukulele/sizeChartTom.jpeg",
     ],
