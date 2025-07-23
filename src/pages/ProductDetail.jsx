@@ -1,10 +1,8 @@
 import { useParams, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FiShoppingBag } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
-import { useEffect } from "react";
-
-import products from "../data/products/product";
+import products from "../data/products.js";
 import ImageModal from "../components/shop/ImageModal";
 import ProductPreview from "../components/shop/ProductPreview";
 import { BuyProduct } from "../components/utils/BuyProduct";
@@ -16,8 +14,7 @@ export default function ProductDetail() {
 
   const currentIndex = products.findIndex((p) => p.id === Number(productId));
   const product = products[currentIndex];
-  const prevProduct =
-    products[(currentIndex - 1 + products.length) % products.length];
+  const prevProduct = products[(currentIndex - 1 + products.length) % products.length];
   const nextProduct = products[(currentIndex + 1) % products.length];
   useEffect(() => {
     setActiveImage(product?.images?.[0] || product?.image);
