@@ -72,7 +72,7 @@ export default function Footer() {
 
       <div className="border-t border-white/20 py-4 text-center text-sm text-white/70">
         © {new Date().getFullYear()} UKUiki. All rights reserved. <br />
-        <p className="m-4">
+        <p className="m-5">
           Thanks for loving “UKUiki” as much as we do! Please remember, our
           brand and logo are registered trademarks and can’t be used without our
           OK.
