@@ -40,7 +40,7 @@ const products = [
     name: "Tom Ukulele Tenor",
     category: "ukulele",
     price: "Rp. x.xxx.xxx",
-    images: ["/ukulele/tomUkuleleTenor.jpg", "/ukulele/tomUkuleleTenor2.jpeg", "/ukulele/sizeChartTom.jpeg"],
+    images: ["/ukulele/tomUkuleleTenor.jpg", "/ukulele/tomUkuleleTenor2.jpeg"],
     desc: "Tenor ukulele painted with Tom character for a fun and playful vibe.",
     sold: false,
   },

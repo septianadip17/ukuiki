@@ -8,21 +8,23 @@ export default function ProductCard({
   showButton = true,
   compact = false,
 }) {
-  const isSold = product.badge?.toLowerCase() === "sold";
+  const isSold = product.sold || product.badge?.toLowerCase() === "sold";
+  const productImage =
+    product.images?.[0] || product.image || "/placeholder.jpg"; // fallback image if needed
 
   return (
     <div className="group relative flex flex-col overflow-hidden rounded-2xl bg-white shadow hover:shadow-lg transition mb-10">
       {/* Badge */}
       {isSold && (
         <span className="absolute top-3 right-3 z-10">
-          <img src={soldBadge} alt="sold" className="w-16" />
+          <img src={soldBadge} alt="Sold" className="w-16" />
         </span>
       )}
 
       {/* Gambar */}
       <Link to={`/shop/${product.id}`} className="block">
         <img
-          src={product.image}
+          src={productImage}
           alt={product.name}
           className="w-full aspect-square object-cover transition duration-300 group-hover:scale-105"
         />

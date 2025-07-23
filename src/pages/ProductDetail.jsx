@@ -4,7 +4,7 @@ import { FiShoppingBag } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 import { useEffect } from "react";
 
-import products from "../data/products";
+import products from "../data/products/product";
 import ImageModal from "../components/shop/ImageModal";
 import ProductPreview from "../components/shop/ProductPreview";
 import { BuyProduct } from "../components/utils/BuyProduct";

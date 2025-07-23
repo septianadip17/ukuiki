@@ -4,7 +4,7 @@ import { Navigation, Pagination } from "swiper/modules";
 import { Link } from "react-router-dom";
 import { FiShoppingBag, FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
-import products from "../../data/products";
+import products from "../../data/products/product.js";
 import ProductCard from "../shop/ProductCard.jsx";
 
 import "swiper/css";
