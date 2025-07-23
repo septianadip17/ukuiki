@@ -1,4 +1,5 @@
 const products = [
+  // Ukulele Products
   {
     id: 1,
     name: "Customize Your Ukulele",
@@ -13,7 +14,11 @@ const products = [
     name: "Hibiscus Painting on Soprano",
     category: "ukulele",
     price: "Rp. xxx.xxx",
-    images: ["/ukulele/hibiscusFull.jpeg, /ukulele/hibiscusSoprano.png"],
+    images: [
+      "/ukulele/hibiscusSoprano.png",
+      "/ukulele/hibiscusFull.jpeg",
+      "/ukulele/hibiscusWhiteBg.jpeg",
+    ],
     desc: "Hand-painted hibiscus art on a soprano ukulele. Bright and tropical.",
     sold: false,
   },
@@ -41,16 +46,40 @@ const products = [
     category: "ukulele",
     price: "Rp. x.xxx.xxx",
     images: [
-      "/ukulele/tomUkuleleTenor.jpg",
       "/ukulele/tomUkuleleTenor2.jpeg",
+      "/ukulele/tomUkuleleTenor.jpg",
       "/ukulele/sizeChartTom.jpeg",
     ],
     desc: "Tenor ukulele painted with Tom character for a fun and playful vibe.",
     sold: false,
   },
-
   {
     id: 6,
+    name: "Genta UT420 Tenor",
+    category: "ukulele",
+    price: "Rp. x.xxx.xxx",
+    images: [
+      "/ukulele/gentaUT420-front.jpeg",
+      "/ukulele/gentaUT420.jpeg",
+      "/ukulele/gentaUT420-side.jpeg",
+    ],
+    desc: `Genta UT420 tenor ukulele with a beautiful finish and rich sound.
+
+Size: Tenor 
+Top: Solid Mahogany  
+Body: Solid Mahogany  
+Fingerboard & Bridge: Rosewood  
+Neck: Mahogany  
+Hardware: Individual Open Frame  
+Nut & Saddle: Bone  
+String: Daddario Titanium Ukulele String  
+Finish: Satin`,
+    sold: false,
+  },
+
+  // T-shirt Products
+  {
+    id: 101,
     name: "UKUiki T-Shirt Purple",
     category: "tshirt",
     price: "Rp. 140.000",
@@ -59,7 +88,7 @@ const products = [
     sold: false,
   },
   {
-    id: 7,
+    id: 102,
     name: "UKUiki T-Shirt Lilac",
     category: "tshirt",
     price: "Rp. 140.000",
@@ -68,7 +97,7 @@ const products = [
     sold: false,
   },
   {
-    id: 8,
+    id: 103,
     name: "UKUiki T-Shirt Black",
     category: "tshirt",
     price: "Rp. 140.000",
@@ -76,6 +105,8 @@ const products = [
     desc: "Stylish black UKUiki shirt made from soft cotton fabric.",
     sold: false,
   },
+
+  // Accessories Products
 ];
 
 export default products;

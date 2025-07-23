@@ -14,7 +14,8 @@ export default function ProductDetail() {
 
   const currentIndex = products.findIndex((p) => p.id === Number(productId));
   const product = products[currentIndex];
-  const prevProduct = products[(currentIndex - 1 + products.length) % products.length];
+  const prevProduct =
+    products[(currentIndex - 1 + products.length) % products.length];
   const nextProduct = products[(currentIndex + 1) % products.length];
   useEffect(() => {
     setActiveImage(product?.images?.[0] || product?.image);
@@ -75,7 +76,7 @@ export default function ProductDetail() {
           <h1 className="mb-2 text-3xl font-bold text-primary">
             {product.name}
           </h1>
-          <p className="mb-4 text-gray-700">{product.desc}</p>
+          <p className="text-gray-700 whitespace-pre-line">{product.desc}</p>
           <div className="flex items-center gap-4 justify-between md:flex-col md:items-start">
             <p className="mb-6 text-xl font-semibold text-primary-light">
               {product.price}
