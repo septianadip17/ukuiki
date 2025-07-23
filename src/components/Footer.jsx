@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaInstagram, FaWhatsapp, FaEnvelope } from "react-icons/fa";
-import whiteLogo from "../assets/whiteLogo.png"; 
+import whiteLogo from "../assets/whiteLogo.png";
 
 const NAV_ITEMS = [
   { title: "Home", path: "/" },
@@ -71,7 +71,12 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/20 py-4 text-center text-sm text-white/70">
-        © {new Date().getFullYear()} UKUiki. All rights reserved.
+        © {new Date().getFullYear()} UKUiki. All rights reserved. <br />
+        <p className="m-4">
+          Thanks for loving “UKUiki” as much as we do! Please remember, our
+          brand and logo are registered trademarks and can’t be used without our
+          OK.
+        </p>
       </div>
     </footer>
   );
