@@ -20,7 +20,7 @@ const products = [
       "/ukulele/hibiscusWhiteBg.jpeg",
     ],
     desc: "Hand-painted hibiscus art on a soprano ukulele. Bright and tropical.",
-    sold: false,
+    sold: true,
   },
   {
     id: 3,
