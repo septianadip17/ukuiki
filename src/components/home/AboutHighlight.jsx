@@ -52,7 +52,7 @@ export default function AboutHighlight() {
 
       {/* --- Instagram Embed Below --- */}
       <div className="w-full">
-        <div className="overflow-hidden rounded-xl shadow-md max-w-3xl mx-auto aspect-[5/5]">
+        <div className="overflow-hidden rounded-xl shadow-md max-w-4xl mx-auto aspect-[5/5]">
           <iframe
             src="https://www.instagram.com/ukuiki/embed"
             title="Instagram UKUiki"
