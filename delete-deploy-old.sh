@@ -1,0 +1,1 @@
+source /home/ukuikic1/nodevenv/ukuiki/20/bin/activate && cd /home/ukuikic1/ukuiki && npx pm2 delete ukuiki
