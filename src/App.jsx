@@ -8,6 +8,7 @@ import Events from "./pages/Events";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import ProductDetail from "./pages/ProductDetail";
+import NotFound from "./pages/NotFound";
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/shop/:productId" element={<ProductDetail />} />
 
+        <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
   );
