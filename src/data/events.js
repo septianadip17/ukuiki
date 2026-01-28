@@ -18,4 +18,14 @@ export default [
     desc: "This class is set for beginners and you can even borrow a ukulele from us!  We have only 15 spots available. Safe yours! ",
     photo: "/banner/summerclass-polarasa.jpeg",
   },
+  {
+    id: 3,
+    title: "UKUiki Jamu Time",
+    date: "2026-01-31",
+    time: "10.30 AM",
+    location: "At at Suwe Ora Jamu di Dwangsa9 - Dharmawangsa Square Jaksel",
+    desc: `Don't miss it! Our first #ukuleleworkshop in 2026 🥰 Learning how to play ukulele while sipping Jamu and meet new friends! 🎵
+          IDR 140K/pax including snack & jamu tasting.`,
+    photo: "/banner/jamu-time.png",
+  },
 ];
