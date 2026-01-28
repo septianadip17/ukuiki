@@ -26,6 +26,6 @@ export default [
     location: "At at Suwe Ora Jamu di Dwangsa9 - Dharmawangsa Square Jaksel",
     desc: `Don't miss it! Our first #ukuleleworkshop in 2026 🥰 Learning how to play ukulele while sipping Jamu and meet new friends! 🎵
           IDR 140K/pax including snack & jamu tasting.`,
-    photo: "/banner/jamu-time.png",
+    photo: "/banner/jamu-time2.png",
   },
 ];
