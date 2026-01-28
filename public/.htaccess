@@ -1,3 +1,20 @@
+# 1. Matikan Passenger/Nodejs bawaan cPanel (PENTING)
+<IfModule mod_passenger.c>
+    PassengerEnabled off
+</IfModule>
+
+# 2. Redirect Error 503/500 ke halaman custom (untuk Failover)
 ErrorDocument 503 /503.html
-ErrorDocument 502 /503.html
 ErrorDocument 500 /503.html
+ErrorDocument 502 /503.html
+
+# 3. Konfigurasi React Router (Agar tidak 404 saat refresh)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteRule . /index.html [L]
+</IfModule>
