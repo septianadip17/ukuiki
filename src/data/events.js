@@ -31,6 +31,15 @@ export default [
   {
     id: 4,
     title: "UKUiki Summer Class",
+    date: "2026-07-19",
+    time: "10.00 AM",
+    location: "at @workunusual.jkt | Lebak Bulus, Cilandak Jaksel",
+    desc: `Jaksel! Udah siap beloom? We're back! Let's learn to strum #ukulele this summer 🌺🎶 Join our class this summer and have fun 🫶 earning UKULELE | meet new friends | fun. IDR 150K | Include drink you can borrow ukulele from us  `,
+    photo: "/banner/ukuiki_workunusual.png",
+  },
+  {
+    id: 5,
+    title: "UKUiki Summer Class",
     date: "2026-07-24",
     time: "05.00 PM - Finish",
     location:
@@ -39,12 +48,13 @@ export default [
     photo: "/banner/ukuiki_klikhubspace.png",
   },
   {
-    id: 5,
+    id: 6,
     title: "UKUiki Summer Class",
-    date: "2026-07-19",
-    time: "10.00 AM",
-    location: "at @workunusual.jkt | Lebak Bulus, Cilandak Jaksel",
-    desc: `Jaksel! Udah siap beloom? We're back! Let's learn to strum #ukulele this summer 🌺🎶 Join our class this summer and have fun 🫶 earning UKULELE | meet new friends | fun. IDR 150K | Include drink you can borrow ukulele from us  `,
-    photo: "/banner/ukuiki_klikhubspace.png",
+    date: "2026-07-26",
+    time: "04.00 PM - Finish",
+    location:
+      "At @fullhouse.bali | Jl. Pantai Pererenan no. 129",
+    desc: `want to learn something new or simply hang out strumming #ukulele ? Join our Ukuiki Ukulele Time learning ukulele | meet new friends | FUN. IDR 100K/pax | include learning materials & coffee you can borrow ukulele from us.`,
+    photo: "/banner/ukuiki_fullhouse.JPG",
   },
 ];
