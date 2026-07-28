@@ -65,7 +65,7 @@ export default function ShopHighlight() {
               <ProductCard
                 product={product}
                 showButton={true}
-                compact={false}
+                compact={true}
               />
             </SwiperSlide>
           ))}

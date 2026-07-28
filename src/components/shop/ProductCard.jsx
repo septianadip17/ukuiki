@@ -32,10 +32,10 @@ export default function ProductCard({
 
       {/* Konten */}
       <div className="p-4 flex flex-col flex-1">
-        <h2 className="text-lg font-semibold text-primary mb-1">
+        <h2 className="text-lg font-semibold text-primary mb-1 line-clamp-1 min-h-[1.75rem]">
           {product.name}
         </h2>
-        <p className="text-sm text-gray-600 line-clamp-2">{product.desc}</p>
+        <p className="text-sm text-gray-600 line-clamp-2 min-h-[3rem]">{product.desc}</p>
         <span className="mt-2 font-bold text-primary-light">
           {product.price}
         </span>
