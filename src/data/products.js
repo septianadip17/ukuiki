@@ -11,6 +11,31 @@ const products = [
   },
   {
     id: 2,
+    name: "Kapas Fox Soprano Ukulele",
+    category: "ukulele",
+    price: "Rp. xxx.xxx",
+    images: ["/ukulele/foxSoprano.jpeg", "/ukulele/foxSoprano2.jpeg"],
+    desc: `Presenting the Kapas Fox Soprano Ukulele—hand-painted featuring UKUiki’s beloved mascot!
+  ​✨ Highlights:
+​Hand-painted custom artwork
+​Classic soprano scale & sound
+​Exclusive limited-edition release`,
+    sold: false,
+  },
+  {
+    id: 3,
+    name: "Hand-Painted Vintage Zebra Soprano Ukulele 🦓🌿",
+    category: "ukulele",
+    price: "Rp. xxx.xxx",
+    images: ["/ukulele/zebraSoprano.jpg", "/ukulele/zebraSoprano2.jpg"],
+    desc: `​Acoustic charm meets safari vibes. Featuring detailed vintage zebra illustrations nestled among hand-drawn nature doodles on a rich green stained wood finish.
+​Fully playable & tuned
+​One-of-a-kind handcrafted design
+​Perfect gift for music lovers and art collectors alike`,
+    sold: false,
+  },
+  {
+    id: 4,
     name: "Hibiscus Painting on Soprano",
     category: "ukulele",
     price: "Rp. xxx.xxx",
@@ -23,7 +48,7 @@ const products = [
     sold: true,
   },
   {
-    id: 3,
+    id: 5,
     name: "Batik Painting on Soprano",
     category: "ukulele",
     price: "Rp. xxx.xxx",
@@ -32,7 +57,7 @@ const products = [
     sold: true,
   },
   {
-    id: 4,
+    id: 6,
     name: "Dayak Painting on Tenor Trembesi",
     category: "ukulele",
     price: "Rp. x.xxx.xxx",
@@ -41,7 +66,7 @@ const products = [
     sold: true,
   },
   {
-    id: 5,
+    id: 7,
     name: "Tom Ukulele Tenor",
     category: "ukulele",
     price: "Rp. x.xxx.xxx",
@@ -54,7 +79,7 @@ const products = [
     sold: false,
   },
   {
-    id: 6,
+    id: 8,
     name: "Genta UT420 Tenor",
     category: "ukulele",
     price: "Rp. x.xxx.xxx",
@@ -76,6 +101,7 @@ String: Daddario Titanium Ukulele String
 Finish: Satin`,
     sold: false,
   },
+  
 
   // T-shirt Products
   {
