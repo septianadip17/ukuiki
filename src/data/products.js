@@ -34,18 +34,31 @@ const products = [
 ​Perfect gift for music lovers and art collectors alike`,
     sold: false,
   },
-  {
+    {
     id: 4,
-    name: "Hibiscus Painting on Soprano",
+    name: "Genta UC 410 Concert Ukulele",
     category: "ukulele",
-    price: "Rp. xxx.xxx",
+    price: "Rp. 2.900.000",
     images: [
-      "/ukulele/hibiscusSoprano.png",
-      "/ukulele/hibiscusFull.jpeg",
-      "/ukulele/hibiscusWhiteBg.jpeg",
+      "/ukulele/gentaUC410__1.png",
+      "/ukulele/gentaUC410_2.jpg",
+      "/ukulele/gentaUC410_3.jpg",
+      "/ukulele/gentaUC410_4.jpg",
     ],
-    desc: "Hand-painted hibiscus art on a soprano ukulele. Bright and tropical.",
-    sold: true,
+    desc: `Genta UC 410 Concert Ukulele
+
+* Top Cedar 
+* Back & Side's Mahogany 
+* Neck Mahogany 
+* Fingerboard Ebony 
+* Bridge Ebony
+* ⁠Binding Ebony 
+* ⁠Purpling Abs
+* ⁠Ross
+* ⁠Nut Sadle Ebony
+* ⁠Dryer Der jung (DJ 326 N)
+* ⁠String D'Addario YBEJ`,
+    sold: false,
   },
   {
     id: 5,
@@ -77,30 +90,20 @@ const products = [
     ],
     desc: "Tenor ukulele painted with Tom character for a fun and playful vibe.",
     sold: false,
-  },
-  {
+  }, {
     id: 8,
-    name: "Genta UT420 Tenor",
+    name: "Hibiscus Painting on Soprano",
     category: "ukulele",
-    price: "Rp. x.xxx.xxx",
+    price: "Rp. xxx.xxx",
     images: [
-      "/ukulele/gentaUT420-front.jpeg",
-      "/ukulele/gentaUT420.jpeg",
-      "/ukulele/gentaUT420-side.jpeg",
+      "/ukulele/hibiscusSoprano.png",
+      "/ukulele/hibiscusFull.jpeg",
+      "/ukulele/hibiscusWhiteBg.jpeg",
     ],
-    desc: `Genta UT420 tenor ukulele with a beautiful finish and rich sound.
-
-Size: Tenor 
-Top: Solid Mahogany  
-Body: Solid Mahogany  
-Fingerboard & Bridge: Rosewood  
-Neck: Mahogany  
-Hardware: Individual Open Frame  
-Nut & Saddle: Bone  
-String: Daddario Titanium Ukulele String  
-Finish: Satin`,
-    sold: false,
+    desc: "Hand-painted hibiscus art on a soprano ukulele. Bright and tropical.",
+    sold: true,
   },
+
   
 
   // T-shirt Products
