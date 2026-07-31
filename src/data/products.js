@@ -40,7 +40,7 @@ const products = [
     category: "ukulele",
     price: "Rp. 2.900.000",
     images: [
-      "/ukulele/gentaUC410__1.png",
+      "/ukulele/gentaUC410_1.png",
       "/ukulele/gentaUC410_2.jpg",
       "/ukulele/gentaUC410_3.jpg",
       "/ukulele/gentaUC410_4.jpg",
