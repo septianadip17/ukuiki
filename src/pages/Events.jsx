@@ -12,7 +12,7 @@ const ExpandableText = ({ text }) => {
   return (
     <div className="mb-3">
       <p
-        className={`text-gray-600 text-sm md:text-base transition-all duration-300 ${
+        className={`text-gray-600 text-sm md:text-base whitespace-pre-line transition-all duration-300 ${
           isExpanded ? "" : "line-clamp-3"
         }`}
       >

@@ -67,7 +67,9 @@ export default [
 Pre Sale - 65K ( sampai 9 Sept 2026 )
 Normal Price - 85K
 OTS - 100K
-tempat terbatas`,
+tempat terbatas.
+Info & Reservasi: DM IG @ukuiki 
+WA: 0818749604`,
     photo: "/banner/konser-orkestra.jpeg",
   },
 ];
