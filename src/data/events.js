@@ -57,4 +57,14 @@ export default [
     desc: `want to learn something new or simply hang out strumming #ukulele ? Join our Ukuiki Ukulele Time learning ukulele | meet new friends | FUN. IDR 100K/pax | include learning materials & coffee you can borrow ukulele from us.`,
     photo: "/banner/ukuiki_fullhouse.JPG",
   },
+    {
+    id: 7,
+    title: "Ukulele Workshop with UKUiki",
+    date: "2026-08-29",
+    time: "10.30 AM - 12.00 PM",
+    location:
+      "At Oma Huis |  Jl. Cikajang no. 74 Jaksel *free valet* ",
+    desc: `Workshop Ukulele bersama kak @grazsuwuu @ukuiki kembali hadir!   Belajar ukulele sambil jajan di @oma.huis  dan bertemu kawan baru, bersama-sama belajar dari nol sangat mudah dan seru!   Segera daftar yuk!  price 165K/person Include voucher jajan   jika tidak punya ukulele jangan khawatir, tersedia ukulele untuk dipinjamkan.`,
+    photo: "/banner/video/29agusstus-oma-huis.mp4",
+  },
 ];
