@@ -52,19 +52,22 @@ export default [
     title: "UKUiki Summer Class",
     date: "2026-07-26",
     time: "04.00 PM - Finish",
-    location:
-      "At @fullhouse.bali | Jl. Pantai Pererenan no. 129",
+    location: "At @fullhouse.bali | Jl. Pantai Pererenan no. 129",
     desc: `want to learn something new or simply hang out strumming #ukulele ? Join our Ukuiki Ukulele Time learning ukulele | meet new friends | FUN. IDR 100K/pax | include learning materials & coffee you can borrow ukulele from us.`,
     photo: "/banner/ukuiki_fullhouse.JPG",
   },
-    {
+  {
     id: 7,
-    title: "Ukulele Workshop with UKUiki",
-    date: "2026-08-29",
-    time: "10.30 AM - 12.00 PM",
-    location:
-      "At Oma Huis |  Jl. Cikajang no. 74 Jaksel *free valet* ",
-    desc: `Workshop Ukulele bersama kak @grazsuwuu @ukuiki kembali hadir!   Belajar ukulele sambil jajan di @oma.huis  dan bertemu kawan baru, bersama-sama belajar dari nol sangat mudah dan seru!   Segera daftar yuk!  price 165K/person Include voucher jajan   jika tidak punya ukulele jangan khawatir, tersedia ukulele untuk dipinjamkan.`,
-    photo: "/banner/video/29agusstus-oma-huis.mp4",
+    title: "UKUIKI ORKESTRA UKULELE ",
+    date: "2026-09-27",
+    time: "18:30 WIB",
+    location: "Posbloc, Jakarta",
+    desc: `Konser Orkestra Ukulele Pertama di Indonesia.
+    10 tahun merangkai nada & cerita lewat petikan ukulele.
+Pre Sale - 65K ( sampai 9 Sept 2026 )
+Normal Price - 85K
+OTS - 100K
+tempat terbatas`,
+    photo: "/banner/konser-orkestra.jpeg",
   },
 ];
