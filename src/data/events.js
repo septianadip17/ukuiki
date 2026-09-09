@@ -58,7 +58,7 @@ export default [
   },
   {
     id: 7,
-    title: "UKUIKI ORKESTRA UKULELE ",
+    title: "UKUiki Orkestra Ukulele ",
     date: "2026-09-27",
     time: "18:30 WIB",
     location: "Posbloc, Jakarta",
@@ -67,9 +67,10 @@ export default [
 Pre Sale - 65K ( sampai 9 Sept 2026 )
 Normal Price - 85K
 OTS - 100K
-tempat terbatas.
+ tempat terbatas.
 Info & Reservasi: DM IG @ukuiki 
 WA: 0818749604`,
+    waMessage: "Saya ingin membeli tiket UKUiki Orkestra Ukulele",
     photo: "/banner/konser-orkestra.jpeg",
   },
 ];
