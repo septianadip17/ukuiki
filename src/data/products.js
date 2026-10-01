@@ -1,3 +1,4 @@
+/* eslint-disable no-irregular-whitespace */
 const products = [
   // Ukulele Products
   {
@@ -34,7 +35,7 @@ const products = [
 ​Perfect gift for music lovers and art collectors alike`,
     sold: false,
   },
-    {
+  {
     id: 4,
     name: "Genta UC 410 Concert Ukulele",
     category: "ukulele",
@@ -90,7 +91,8 @@ const products = [
     ],
     desc: "Tenor ukulele painted with Tom character for a fun and playful vibe.",
     sold: false,
-  }, {
+  },
+  {
     id: 8,
     name: "Hibiscus Painting on Soprano",
     category: "ukulele",
@@ -103,8 +105,6 @@ const products = [
     desc: "Hand-painted hibiscus art on a soprano ukulele. Bright and tropical.",
     sold: true,
   },
-
-  
 
   // T-shirt Products
   {
@@ -136,6 +136,24 @@ const products = [
   },
 
   // Accessories Products
+   {
+    id: 201,
+    name: "Ukulele Earrings",
+    category: "accessory",
+    price: "Rp. 40.000",
+    images: ["/accesories/earringUkuiki.jpeg"],
+    desc: "Color options: Red, yellow, green, blue, black, pink, brown, and purple.",
+    sold: false,
+  },
+   {
+    id: 202,
+    name: "UKUiki Stickers",
+    category: "accessory",
+    price: "Rp. 25.000",
+    images: ["/accesories/stickerUkuiki.jpeg"],
+    desc: "UKUiki stickers.",
+    sold: false,
+  },
 ];
 
 export default products;
