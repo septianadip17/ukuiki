@@ -25,15 +25,14 @@ const products = [
   },
   {
     id: 3,
-    name: "Hand-Painted Vintage Zebra Soprano Ukulele 🦓🌿",
+    name: "Ukuiki X Genta fun colors ukulele",
     category: "ukulele",
-    price: "Rp. xxx.xxx",
-    images: ["/ukulele/zebraSoprano.jpg", "/ukulele/zebraSoprano2.jpg"],
-    desc: `​Acoustic charm meets safari vibes. Featuring detailed vintage zebra illustrations nestled among hand-drawn nature doodles on a rich green stained wood finish.
-​Fully playable & tuned
-​One-of-a-kind handcrafted design
-​Perfect gift for music lovers and art collectors alike`,
-    sold: true,
+    price: "Rp. 2.900.000",
+    images: ["/ukulele/ukuikiFuncolors.png"],
+    desc: `Size : concerto
+    Can added custom painting
+    2.900 K, Added painting 3.500 K`,
+    sold: false,
   },
   {
     id: 4,
@@ -105,18 +104,17 @@ const products = [
     desc: "Hand-painted hibiscus art on a soprano ukulele. Bright and tropical.",
     sold: true,
   },
-    {
+  {
     id: 9,
-    name: "Ukuiki X Genta fun colors ukulele",
+    name: "Hand-Painted Vintage Zebra Soprano Ukulele 🦓🌿",
     category: "ukulele",
-    price: "Rp. 2.900.000",
-    images: [
-      "/ukulele/ukuikiFuncolors.png",
-    ],
-    desc: `Size : concerto
-    Can added custom painting
-    2.900 K, Added painting 3.500 K`,
-    sold: false,
+    price: "Rp. xxx.xxx",
+    images: ["/ukulele/zebraSoprano.jpg", "/ukulele/zebraSoprano2.jpg"],
+    desc: `​Acoustic charm meets safari vibes. Featuring detailed vintage zebra illustrations nestled among hand-drawn nature doodles on a rich green stained wood finish.
+​Fully playable & tuned
+​One-of-a-kind handcrafted design
+​Perfect gift for music lovers and art collectors alike`,
+    sold: true,
   },
 
   // T-shirt Products
@@ -149,7 +147,7 @@ const products = [
   },
 
   // Accessories Products
-   {
+  {
     id: 201,
     name: "Ukulele Earrings",
     category: "accessory",
@@ -158,7 +156,7 @@ const products = [
     desc: "Color options: Red, yellow, green, blue, black, pink, brown, and purple.",
     sold: false,
   },
-   {
+  {
     id: 202,
     name: "UKUiki Stickers",
     category: "accessory",
